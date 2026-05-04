@@ -16,7 +16,7 @@ header{
     align-items: center;
     padding: 20px;
     z-index: 10;
-    background: rgba(255,255,255,0.25);
+    background: rgba(159, 249, 186, 0.434);
     backdrop-filter: blur(3px);
     border-radius: 30px;
     transform: translate(-50%);
@@ -52,16 +52,14 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
-nav ul li:first-child a{
-   border-bottom: none;
-} 
-nav ul li:first-child a::after{
-    width: 100%;
+.destaque{
+    font-weight: 500;
 }
-body{
+.destaque::after{
+   width: 100%;
+}
 
-    color: #013227;
-}
+/*página inicial*/
 .inicio{
     padding-top: 180px;
     padding-bottom: 30px;
@@ -77,6 +75,7 @@ body{
     background-size: cover;
     background-position: center;
     height: 100vh;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 .conteudo{
     display: flex;
@@ -99,7 +98,7 @@ body{
     font-size: 16px;
     max-width: 420px;
     margin-bottom: 25px;
-    opacity: 0.8;
+    
     color: #013227;
     padding-left: 25px;
     line-height: 1.7;
@@ -112,7 +111,7 @@ body{
     top: 5px;
     width: 3px;
     height: 100%;
-    background-color: #1b4332;
+    background-color: #013227;
     border-radius: 2px;
 }
 .inicio a{
@@ -134,8 +133,8 @@ body{
     color: white;
 }
 .informacoes{
-    background-color: rgb(255, 249, 242);
-    min-height: 100vh;
+    background: linear-gradient(to bottom, #f6fff8, #e9fce9);
+    height: 100vh;
     padding: 140px 120px;
 }
 .sobre{
@@ -144,16 +143,18 @@ body{
     justify-content: space-between;
     gap: 80px;
     margin: auto;
+    background: rgba(195, 253, 211, 0.6);
+    backdrop-filter: blur(5px);
 }
 .texto-sobre{
     width: 60%;
     background: #c3fdd3cd;
-    padding: 40px;
-    border-radius: 20px;
+    padding: 30px;
+    
 }
 .texto-sobre h1{
     font-size: 70px;
-    margin-bottom: 30px;
+    margin: 0 0 20px 0;
 }
 .texto-sobre p{
     font-size: 20px;
@@ -177,6 +178,74 @@ body{
 }
 .texto-sobre,
 .sobre-figura{
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-               
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);             
+}
+/*pagina animais*/
+.pagina-animais{
+   height: 100vh;
+   background: linear-gradient(to bottom, #f6fff8, #e9fce9);
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 70px;
+    font-family: 'Times New Roman',Time,serif;
+    color: #1b4332;
+}
+.cursiva{
+    font-family: 'Parisienne',cursive;
+    font-weight: normal;
+}
+.terrestres,
+.aquaticos,
+.aereos{
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    vertical-align: top;
+    transition: transform 0.3s ease;
+}
+.terrestres:hover,
+.aquaticos:hover,
+.aereos:hover{
+    transform: scale(1.03);
+}
+.imagem-animais img{
+    position: relative;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.imagem-animais::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.15);
+}
+.tipo-de-animal{
+    text-align: center;
+    margin-top: -40px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+
+}
+.tipo-de-animal h3{
+   letter-spacing: 1px;
+   font-weight: 500;
+   color: rgb(255, 249, 242);
+   font-size: 22px;
+   background: rgba(27, 67, 50, 0.6);
+   backdrop-filter: blur(0.5px);
+   display: block;
+   width: 100%;
+   padding: 5px 0;
+   text-align: center;
 }
