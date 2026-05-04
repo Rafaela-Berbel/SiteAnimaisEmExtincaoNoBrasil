@@ -1,3 +1,4 @@
+/*GERAL*/
 *{
     margin: 0;
     padding: 0;
@@ -179,4 +180,126 @@ body{
 .sobre-figura{
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
                
+}
+
+/*PAGINA CAUSAS*/
+
+.inicio-causas{
+    padding-top: 180px;
+    padding-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: flex-start;
+    color: #013227;
+    font-family:  'Merriweather', serif;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url(/imagens/veado-em-chamas.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.conteudo-causas h1 {
+    margin-left: 120px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.conteudo-causas p{
+    position: relative;
+    margin-left: 100px;
+    max-width: none;
+    font-size: 20px;
+}
+
+.container-info{
+    display: flex;
+    gap: 10vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #E67E22;
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 10px;
+}
+
+.info h1{
+    margin-top:50px;
+    font-size: 40px;
+    font-family: 'Libre Baskeville', serif;
+}
+
+.info p{
+    font-size: 18px;
+    font-family: 'Libre Baskeville', serif;
+}
+
+.causas{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Libre Baskeville', serif;
+    
+}
+
+.causas h2{
+    margin-top: 200px;
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+}
+.causas p{
+    margin-bottom: 60px;
+}
+.pagina-causas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 30px auto;
+    max-width: 1000px;
+    font-family: 'Merriweather', serif;
+    background-color: #c3fdd3cd;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.pagina-causas img{
+    height: 350px;
+    border-radius: 30px
+}
+
+.pagina-causas p{
+    max-width: 500px;
+    color: #013227;
+    font-family: 'Libre Baskeville', serif;
+}
+
+.invertida{
+    flex-direction: row-reverse;
+}
+
+.conteudo-principais{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.desloca-esquerda{
+    transform: translateX(-100px);
+}
+
+.desloca-direita{
+    transform: translateX(100px);
 }
