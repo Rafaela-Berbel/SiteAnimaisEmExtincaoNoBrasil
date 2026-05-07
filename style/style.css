@@ -1,4 +1,13 @@
 /*GERAL*/
+:root {
+  --fundo-claro: #F8F9FA; 
+  --verde-escuro: #01281f;     
+  --verde-medio: #1B4332;
+  --verde-claro: #B7E4C7;
+  --caixa-destaque: #B8D8BA;
+  --laranja-alerta: #F4A261; 
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,8 +26,9 @@ header{
     align-items: center;
     padding: 20px;
     z-index: 10;
-    background: rgba(159, 249, 186, 0.434);
-    backdrop-filter: blur(3px);
+    background:var(--verde-claro);
+    opacity: 0.7;
+    backdrop-filter: blur(2px);
     border-radius: 30px;
     transform: translate(-50%);
 }
@@ -30,7 +40,7 @@ nav ul{
 
 nav ul li a{
     text-decoration: none;
-    color: #013227;
+    color: var(--verde-escuro);
     font-size: 0.95rem;
     position: relative;
     display: inline-block;
@@ -47,7 +57,7 @@ nav ul li a::after{
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: #1b4332;
+    background-color: var(--verde-medio);
     transition: 0.3s;
 }
 nav ul li a:hover::after{
@@ -100,7 +110,7 @@ nav ul li a:hover::after{
     max-width: 420px;
     margin-bottom: 25px;
     
-    color: #013227;
+    color: var(--verde-escuro);
     padding-left: 25px;
     line-height: 1.7;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -112,7 +122,7 @@ nav ul li a:hover::after{
     top: 5px;
     width: 3px;
     height: 100%;
-    background-color: #013227;
+    background-color: var(--verde-medio);
     border-radius: 2px;
 }
 .inicio a{
@@ -121,20 +131,20 @@ nav ul li a:hover::after{
     margin-bottom: 30px;
     text-decoration: none;
     padding: 10px 26px;
-    border: 1px solid #1b4332;
+    border: 1px solid var(--verde-medio);
     border-radius: 30px;
-    color: #1b4332;
+    color: var(--verde-medio);
     transition: 0.3s;
     font-size: 14px;
     background: rgba(255,255,255,0.25);
     backdrop-filter: blur(3px);
 }
 .inicio a:hover{
-    background-color: #1b4332;
+    background-color: var(--verde-medio);
     color: white;
 }
 .informacoes{
-    background: #f9fcf9;
+    background: var(--fundo-claro);
     height: 100vh;
     padding: 140px 120px;
 }
@@ -144,12 +154,12 @@ nav ul li a:hover::after{
     justify-content: space-between;
     gap: 80px;
     margin: auto;
-    background: rgba(195, 253, 211, 0.6);
+    background: var(--caixa-destaque);
     backdrop-filter: blur(5px);
 }
 .texto-sobre{
     width: 60%;
-    background: #c3fdd3cd;
+    background: var(--verde-claro);
     padding: 30px;
     
 }
@@ -163,7 +173,7 @@ nav ul li a:hover::after{
     margin-bottom: 20px;
 }
 .sobre-figura{
-    background: #c3fdd3cd;
+    background: var(--verde-claro);
     padding: 20px;
     border-radius: 20px;
     width: 40%;
@@ -184,7 +194,7 @@ nav ul li a:hover::after{
 /*pagina animais*/
 .pagina-animais{
    height: 100vh;
-   background: #f9fcf9
+   background: var(--fundo-claro)
 }
 h1{
     text-align: center;
@@ -192,7 +202,7 @@ h1{
     margin-bottom: 40px;
     font-size: 70px;
     font-family: 'Times New Roman',Time,serif;
-    color: #1b4332;
+    color: var(--verde-medio);
 }
 .cursiva{
     font-family: 'Parisienne',cursive;
@@ -236,12 +246,12 @@ h1{
     height: 550px;
     object-fit: cover;
     transition: transform 0.3s ease;
-    box-shadow: 0 0 0 8px #c3fdd3cd;
+    box-shadow: 0 0 0 8px var(--verde-claro);
 }
 .terrestres:hover img,
 .aquaticos:hover img,
 .aereos:hover img{
-    box-shadow: 0 0 0 6px #c3fdd3;
+    box-shadow: 0 0 0 6px var(--verde-claro);
 }
 .tipo-de-animal{
     text-align: center;
@@ -257,8 +267,9 @@ h1{
    font-weight: 500;
    color: rgb(255, 249, 242);
    font-size: 22px;
-   background: rgba(27, 67, 50, 0.6);
-   backdrop-filter: blur(0.5px);
+   background: var(--verde-medio);
+   opacity: 0.6;
+   backdrop-filter: blur(0.2px);
    display: block;
    width: 100%;
    padding: 5px 0;
@@ -276,7 +287,7 @@ h1{
     justify-content: flex-start;
     gap: 30px;
     align-items: flex-start;
-    color: #013227;
+    color: var(--verde-escuro);
     font-family:  'Merriweather', serif;
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url(/imagens/veado-em-chamas.jpg);
     background-size: cover;
@@ -304,7 +315,7 @@ h1{
     gap: 10vw;
     flex-wrap: wrap;
     justify-content: center;
-    color: #E67E22;
+    color: var(--laranja-alerta);
 }
 
 .info{
@@ -352,7 +363,7 @@ h1{
     margin: 30px auto;
     max-width: 1000px;
     font-family: 'Merriweather', serif;
-    background-color: #c3fdd3cd;
+    background-color: var(--caixa-destaque);
     border-radius: 20px;
     padding: 30px;
 }
@@ -364,7 +375,7 @@ h1{
 
 .pagina-causas p{
     max-width: 500px;
-    color: #013227;
+    color: var(--verde-escuro);
     font-family: 'Libre Baskeville', serif;
 }
 
