@@ -84,7 +84,7 @@ nav ul li a:hover::after {
     align-items: center;
     color: #013227;
     font-family: "Inter", sans-serif;
-    background-image: url(/imagens/b20547d2-b8cf-43c0-a466-2c68dca2ce6d.png);
+    background-image: url(../imagens/b20547d2-b8cf-43c0-a466-2c68dca2ce6d.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -277,8 +277,8 @@ h1 {
     padding: 5px 0;
     text-align: center;
 }
-
-/*PAGINA CAUSAS*/
+/*=================================================================================================================*/
+                                        /*PAGINA CAUSAS*/
 
 .inicio-causas {
     padding-top: 180px;
@@ -293,7 +293,7 @@ h1 {
     font-family: "Merriweather", serif;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
-        url(/imagens/veado-em-chamas.jpg);
+        url(../imagens/veado-em-chamas.jpg);
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -452,3 +452,6 @@ h1 {
     transform: translate(100px);
     justify-content: flex-end;
 }
+
+
+/*=================================================================================================================*/
