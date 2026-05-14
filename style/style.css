@@ -397,3 +397,225 @@ h1{
 .desloca-direita{
     transform: translateX(100px);
 }
+
+
+/*=================================================================================*/
+
+/* RESPONSIVIDADE */
+
+/* Ajustes para Tablets (telas até 1024px) */
+@media (max-width: 1024px) {
+    header {
+        width: 95%;
+    }
+    
+    .sobre {
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .texto-sobre, .sobre-figura {
+        width: 100%;
+    }
+
+    .informacoes {
+        height: auto;
+        padding: 80px 40px;
+    }
+
+    .terrestres, .aquaticos, .aereos {
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    .pagina-animais {
+        height: auto;
+        padding-bottom: 50px;
+    }
+}
+
+/* Ajustes para Celulares (telas até 768px) */
+@media (max-width: 768px) {
+    
+    header {
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    /* Página Inicial */
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .inicio p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    /* Página de Causas */
+    .inicio-causas {
+        height: auto;
+        padding: 120px 20px 40px 20px;
+        align-items: center;
+    }
+
+    .conteudo-causas h1 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .conteudo-causas p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .container-info {
+        gap: 30px;
+    }
+
+    /* Seções de Causas (Removendo os deslocamentos laterais que quebram o scroll) */
+    .pagina-causas {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .invertida {
+        flex-direction: column;
+    }
+
+    .desloca-esquerda, .desloca-direita {
+        transform: translateX(0); /* Remove o deslocamento no mobile */
+    }
+
+    .pagina-causas img {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .conteudo-principais {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Ajuste de altura geral para seções que eram 100vh */
+    .inicio, .informacoes, .pagina-animais {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+/* Ajustes extras para telas muito pequenas (320px - 480px) */
+@media (max-width: 480px) {
+    .inicio h1 {
+        font-size: 32px;
+    }
+
+    .texto-sobre h1, h1 {
+        font-size: 38px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+/*====================================================*/
+
+/* PAGINA CONSEQUNECIAS */
+
+.container-consequencias{
+    display: flex;
+    justify-content: center; /* Centraliza os cards na linha */
+    align-items: stretch;     /* Faz todos os cards da mesma linha terem a mesma altura */
+    gap: 25px;               /* Espaço entre os cards */
+    flex-wrap: wrap;         /* ISSO faz eles pularem de linha */
+    width: 100%;             /* Garante que ocupe a largura total disponível */
+    max-width: 1200px;       /* Limita para não ficar largo demais em monitores gigantes */
+    margin: 40px auto;       /* Centraliza o bloco todo na página */
+}
+
+.card-consequencias {
+    width: 380px; /* Define um tamanho fixo para não esticar */
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #e0e7e1;
+}
+
+.card-header {
+    height: 250px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o ícone para cima e o texto para baixo */
+    align-items: flex-start; /* Alinha tudo à esquerda */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), 
+                      url(../imagens/araras-azul.jpg); /* Verifique se o caminho está certo! */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-text {
+    text-align: left; /* Garante que o 70% não centralize */
+}
+
+.percentage {
+    font-size: 42px;
+    font-weight: 800;
+    display: block; /* Força a quebra de linha */
+}
+
+.subtext {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-body {
+    padding: 30px 25px;
+    text-align: left; /* Alinha o texto de baixo à esquerda */
+}
+
+.card-body h3 {
+    color: #01281f;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
