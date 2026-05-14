@@ -140,10 +140,12 @@ nav ul li a:hover::after {
     font-size: 14px;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(3px);
+    transition: transform 0.3;
 }
 .inicio a:hover {
     background-color: var(--verde-medio);
     color: white;
+    transform: scale(1.05);
 }
 .informacoes {
     background: var(--fundo-claro);
