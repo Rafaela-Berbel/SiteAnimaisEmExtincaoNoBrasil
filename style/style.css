@@ -72,6 +72,59 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+.p-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--fundo-claro);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    animation: loader-fade 2s ease-in forwards;
+}
+
+.p-loader img {
+    width: 250px;
+
+    animation: intro-animal 2s ease-in forwards;
+
+    will-change: transform, opacity;
+    transform-origin: center;
+}
+
+@keyframes intro-animal {
+    0% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes loader-fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 /*página inicial*/
 .inicio {
     padding-top: 180px;
@@ -278,37 +331,38 @@ h1 {
     text-align: center;
 }
 /*=================================================================================================================*/
-                                        /*PAGINA CAUSAS*/
- @keyframes mostrar-direita{
-    from{
+/*PAGINA CAUSAS*/
+@keyframes mostrar-direita {
+    from {
         opacity: 0;
         transform: translateX(0) scale(0.6);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateX(150px) scale(1);
     }
 }
 
- @keyframes mostrar-esquerda{
-    from{
+@keyframes mostrar-esquerda {
+    from {
         opacity: 0;
         transform: translateX(0) scale(0.6);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateX(-150px) scale(1);
     }
 }
 
-.desloca-direita, .mini-direita{
+.desloca-direita,
+.mini-direita {
     animation: mostrar-direita linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
 }
 
-
-.desloca-esquerda, .mini-esquerda{
+.desloca-esquerda,
+.mini-esquerda {
     animation: mostrar-esquerda linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
@@ -473,7 +527,7 @@ h1 {
 .imagem-mini img {
     height: 80px;
     width: auto;
-    background-color:  rgba(183, 228, 199, 0.4);
+    background-color: rgba(183, 228, 199, 0.4);
     border-radius: 10px;
 }
 
@@ -491,15 +545,15 @@ h1 {
 
 /* PAGINA CONSEQUNECIAS */
 
-.container-consequencias{
+.container-consequencias {
     display: flex;
     justify-content: center; /* Centraliza os cards na linha */
-    align-items: stretch;     /* Faz todos os cards da mesma linha terem a mesma altura */
-    gap: 25px;               /* Espaço entre os cards */
-    flex-wrap: wrap;         /* ISSO faz eles pularem de linha */
-    width: 100%;             /* Garante que ocupe a largura total disponível */
-    max-width: 1200px;       /* Limita para não ficar largo demais em monitores gigantes */
-    margin: 40px auto;       /* Centraliza o bloco todo na página */
+    align-items: stretch; /* Faz todos os cards da mesma linha terem a mesma altura */
+    gap: 25px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* ISSO faz eles pularem de linha */
+    width: 100%; /* Garante que ocupe a largura total disponível */
+    max-width: 1200px; /* Limita para não ficar largo demais em monitores gigantes */
+    margin: 40px auto; /* Centraliza o bloco todo na página */
 }
 
 .card-consequencias {
@@ -508,7 +562,7 @@ h1 {
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     border: 1px solid #e0e7e1;
 }
 
@@ -519,8 +573,9 @@ h1 {
     flex-direction: column;
     justify-content: space-between; /* Empurra o ícone para cima e o texto para baixo */
     align-items: flex-start; /* Alinha tudo à esquerda */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), 
-                      url(../imagens/araras-azul.jpg); /* Verifique se o caminho está certo! */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/araras-azul.jpg); /* Verifique se o caminho está certo! */
     background-size: cover;
     background-position: center;
     color: white;
@@ -610,7 +665,7 @@ h1 {
 .imagem-mini img {
     height: 80px;
     width: auto;
-    background-color:  rgba(183, 228, 199, 0.4);
+    background-color: rgba(183, 228, 199, 0.4);
     border-radius: 10px;
 }
 
@@ -632,14 +687,15 @@ h1 {
     header {
         width: 95%;
     }
-    
+
     .sobre {
         flex-direction: column;
         padding: 40px;
         gap: 40px;
     }
 
-    .texto-sobre, .sobre-figura {
+    .texto-sobre,
+    .sobre-figura {
         width: 100%;
     }
 
@@ -648,12 +704,14 @@ h1 {
         padding: 80px 40px;
     }
 
-    .terrestres, .aquaticos, .aereos {
+    .terrestres,
+    .aquaticos,
+    .aereos {
         width: 90%;
         margin: 20px auto;
         display: block;
     }
-    
+
     .pagina-animais {
         height: auto;
         padding-bottom: 50px;
@@ -662,7 +720,6 @@ h1 {
 
 /* Ajustes para Celulares (telas até 768px) */
 @media (max-width: 768px) {
-    
     header {
         top: 0;
         width: 100%;
@@ -722,7 +779,8 @@ h1 {
         flex-direction: column;
     }
 
-    .desloca-esquerda, .desloca-direita {
+    .desloca-esquerda,
+    .desloca-direita {
         transform: translateX(0); /* Remove o deslocamento no mobile */
     }
 
@@ -738,7 +796,9 @@ h1 {
     }
 
     /* Ajuste de altura geral para seções que eram 100vh */
-    .inicio, .informacoes, .pagina-animais {
+    .inicio,
+    .informacoes,
+    .pagina-animais {
         height: auto;
         min-height: 100vh;
     }
@@ -750,7 +810,8 @@ h1 {
         font-size: 32px;
     }
 
-    .texto-sobre h1, h1 {
+    .texto-sobre h1,
+    h1 {
         font-size: 38px;
     }
 
