@@ -5,7 +5,8 @@
     --verde-medio: #1b4332;
     --verde-claro: #b7e4c7;
     --caixa-destaque: #b8d8ba;
-    --laranja-alerta: #f4a261;
+    --rosa-alerta: rgb(255, 0, 102);
+
 }
 
 * {
@@ -147,50 +148,56 @@ nav ul li a:hover::after {
 .inicio a:hover {
     background-color: var(--verde-medio);
     color: white;}
+
 .informacoes {
     background: var(--fundo-claro);
-    height: 100vh;
     padding: 140px 120px;
 }
 .sobre {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
-    padding: 30px;
+    gap: 70px;
+    padding: 50px;
     margin: auto;
-    background: var(--caixa-destaque);
-    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
 }
 .texto-sobre {
     width: 60%;
-    background: var(--verde-claro);
-    border-radius: 10px;
-    padding: 30px;
 }
 .texto-sobre h1 {
-    font-size: 70px;
-    margin: 0 0 20px 0;
+    font-size: 64px;
+    margin-bottom: 25px;
+    color: var(--verde-escuro);
+    font-family: "Merriweather", serif;
+    line-height: 1.1;
 }
 .texto-sobre p {
-    font-size: 20px;
-    line-height: 1.7;
+    font-size: 19px;
+    line-height: 1.9;
     margin-bottom: 20px;
+    font-family: "Libre Baskerville",serif;
+    color: black;
+
 }
 .sobre-figura {
-    background: var(--verde-claro);
-    padding: 20px;
-    border-radius: 20px;
     width: 40%;
     display: flex;
     justify-content: center;
 }
 .sobre-figura img {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     height: auto;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    border-radius: 24px;
+    transition: transform 0.4s ease;
+}
+.sobre-figura img:hover{
+    transform: scale(1.03);
 }
 .texto-sobre,
 .sobre-figura {
@@ -199,7 +206,6 @@ nav ul li a:hover::after {
 /*pagina animais*/
 .pagina-animais {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #f8f9fa, #edf6f1);
 }
 .inicio-animais{
     padding-top: 180px;
@@ -301,15 +307,14 @@ nav ul li a:hover::after {
 .terrestres,
 .aquaticos,
 .aereos {
+    border-radius: 28px;
     cursor: pointer;
     position: relative;
-    display: inline-block;
-    min-width: 280px;
+    flex: 1 1 300px;
     overflow: hidden;
-    margin: 0 1.5%;
+    max-width: 350px;
     vertical-align: top;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 .terrestres:hover,
 .aquaticos:hover,
@@ -360,19 +365,21 @@ nav ul li a:hover::after {
     bottom: 20px;
     left: 0;
     width: 100%;
+    z-index: 10;
 }
 .tipo-de-animal h3 {
     letter-spacing: 0.5px;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     background: var(--verde-medio);
-    opacity: 0.6;
-    backdrop-filter: blur(6px);
+    opacity: 0.8;
     display: block;
     width: 100%;
     padding: 14px 0;
     text-align: center;
+    border-radius: 25px;    
+    border: 1.3px solid var(--verde-escuro);
 }
 .botao-causas{
     margin-bottom: 35px;
@@ -476,7 +483,7 @@ nav ul li a:hover::after {
     gap: 10vw;
     flex-wrap: wrap;
     justify-content: center;
-    color: var(--laranja-alerta);
+    color: var(--rosa-alerta);
 }
 
 .info {
@@ -604,4 +611,24 @@ nav ul li a:hover::after {
 .mini-direita {
     transform: translate(100px);
     justify-content: flex-end;
+}
+/* PÁGINA DE ANIMAIS AQUATICOS*/
+.inicio-animais-aquaticos{
+    padding-top: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 70vh;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.35),
+            rgba(0,0,0,0.55)),
+            url("../imagens/tartaruga-no-lixo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ font-family: "Merriweather", serif;
+ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
