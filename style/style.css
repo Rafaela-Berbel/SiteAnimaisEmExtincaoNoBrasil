@@ -28,7 +28,7 @@ header {
     padding: 20px;
     z-index: 10;
     background: var(--verde-claro);
-    backdrop-filter: blur(4px);
+    opacity: 0.8;
     border-radius: 30px;
     transform: translate(-50%);
 }
@@ -373,12 +373,12 @@ nav ul li a:hover::after {
     color: white;
     font-size: 25px;
     background: var(--verde-medio);
-    opacity: 0.8;
+    opacity: 0.7;
     display: block;
     width: 100%;
     padding: 14px 0;
     text-align: center;
-    border-radius: 25px;    
+     
     border: 1.3px solid var(--verde-escuro);
 }
 .botao-causas{
@@ -631,4 +631,34 @@ nav ul li a:hover::after {
     background-repeat: no-repeat;
  font-family: "Merriweather", serif;
  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.inicio-animais-aereos{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    padding-top: 180px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 70hv;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Merrieweather",serif;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url(../imagens/aves-ameaçadas.jpg);
+}
+.inicio-animais-terrestres{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    padding-top: 180px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 70hv;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+    font-family: "Merrieweather",serif;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url(../imagens/tatu-bola.jpg);
 }
