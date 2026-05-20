@@ -27,8 +27,7 @@ header {
     padding: 20px;
     z-index: 10;
     background: var(--verde-claro);
-    opacity: 0.7;
-    backdrop-filter: blur(1px);
+    opacity: 0.8;
     border-radius: 30px;
     transform: translate(-50%);
 }
@@ -123,7 +122,7 @@ nav ul li a:hover::after {
         opacity: 0;
         visibility: hidden;
     }
-}
+} 
 
 /*página inicial*/
 .inicio {
@@ -177,7 +176,7 @@ nav ul li a:hover::after {
     top: 5px;
     width: 3px;
     height: 100%;
-    background-color: var(--verde-medio);
+    background-color: var(--verde-claro);
     border-radius: 2px;
 }
 .inicio a {
@@ -247,7 +246,11 @@ nav ul li a:hover::after {
 .sobre-figura {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-/*pagina animais*/
+
+
+/*====================================================*/
+            /*pagina animais*/
+
 .pagina-animais {
     height: 100vh;
     background: var(--fundo-claro);
@@ -330,6 +333,7 @@ h1 {
     padding: 5px 0;
     text-align: center;
 }
+
 /*=================================================================================================================*/
 /*PAGINA CAUSAS*/
 @keyframes mostrar-direita {
@@ -395,7 +399,7 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     line-height: 1.2;
-    color: var(--verde-escuro);
+    color: white;
 }
 
 .conteudo-causas p {
@@ -403,7 +407,7 @@ h1 {
     margin-left: 100px;
     max-width: none;
     font-size: 20px;
-    color: var(--verde-escuro);
+    color: white;
 }
 
 .container-info {
@@ -543,32 +547,61 @@ h1 {
 
 /*=================================================================================*/
 
-/* PAGINA CONSEQUNECIAS */
+/* PAGINA CONSEQUENCIAS */
 
+@keyframes aparecer {
+    from{
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.inicio-consequencia{
+    background-image: url(/imagens/anta-consequencia.avif);
+}
 .container-consequencias {
     display: flex;
-    justify-content: center; /* Centraliza os cards na linha */
-    align-items: stretch; /* Faz todos os cards da mesma linha terem a mesma altura */
-    gap: 25px; /* Espaço entre os cards */
-    flex-wrap: wrap; /* ISSO faz eles pularem de linha */
-    width: 100%; /* Garante que ocupe a largura total disponível */
-    max-width: 1200px; /* Limita para não ficar largo demais em monitores gigantes */
-    margin: 40px auto; /* Centraliza o bloco todo na página */
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 25px; 
+    flex-wrap: wrap; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 40px auto; 
 }
 
 .card-consequencias {
-    width: 380px; /* Define um tamanho fixo para não esticar */
+    width: 380px; 
     background-color: #ffffff;
     border-radius: 25px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     font-family: "Inter", sans-serif;
     border: 1px solid #e0e7e1;
+
+    animation: aparecer linear both;
+    animation-timeline: view();
+}
+
+.card-consequencias:nth-child(3n + 1) { 
+    animation-range: entry 0% cover 20%;
+}
+
+.card-consequencias:nth-child(3n + 2) { 
+   animation-range: entry 5% cover 25%;
+}
+
+.card-consequencias:nth-child(3n + 3) { 
+    animation-range: entry 10% cover 30%;
 }
 
 .card-header {
     height: 250px;
-    padding: 25px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Empurra o ícone para cima e o texto para baixo */
@@ -594,13 +627,13 @@ h1 {
 }
 
 .header-text {
-    text-align: left; /* Garante que o 70% não centralize */
+    text-align: left; 
 }
 
 .percentage {
     font-size: 42px;
     font-weight: 800;
-    display: block; /* Força a quebra de linha */
+    display: block; 
 }
 
 .subtext {
@@ -610,7 +643,7 @@ h1 {
 
 .card-body {
     padding: 30px 25px;
-    text-align: left; /* Alinha o texto de baixo à esquerda */
+    text-align: left; 
 }
 
 .card-body h3 {
@@ -623,60 +656,6 @@ h1 {
     color: #555;
     font-size: 14px;
     line-height: 1.6;
-}
-
-.pagina-causas-img {
-    overflow: hidden;
-    height: 350px;
-    border-radius: 30px;
-}
-
-.pagina-causas-img img {
-    height: 350px;
-    border-radius: 30px;
-    transition: transform 0.5s ease;
-    display: block;
-}
-
-.pagina-causas-img img:hover {
-    transform: scale(1.1);
-}
-
-.imagem-mini {
-    display: flex;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-}
-
-.imagem-mini p {
-    font-family: "Libre Baskeville", serif;
-    font-size: 20px;
-    color: rgb(255, 0, 102);
-    margin: 0px;
-    background-color: rgba(255, 0, 102, 0.2);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.imagem-mini img {
-    height: 80px;
-    width: auto;
-    background-color: rgba(183, 228, 199, 0.4);
-    border-radius: 10px;
-}
-
-.mini-esquerda {
-    transform: translate(-100px);
-    justify-content: flex-start;
-}
-
-.mini-direita {
-    transform: translate(100px);
-    justify-content: flex-end;
 }
 
 /*==============================================================================*/
