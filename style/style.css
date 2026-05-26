@@ -122,7 +122,40 @@ nav ul li a:hover::after {
         opacity: 0;
         visibility: hidden;
     }
-} 
+}
+
+.container-info {
+    display: flex;
+    gap: 10vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--laranja-alerta);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.info-consequencia {
+    flex-direction: row;
+}
+
+.info h1 {
+    margin-top: 50px;
+    font-size: 35px;
+    font-family: "Libre Baskeville", serif;
+    color: var(--laranja-alerta);
+}
+
+.info p {
+    font-size: 18px;
+    font-family: "Libre Baskeville", serif;
+}
 
 /*página inicial*/
 .inicio {
@@ -247,9 +280,8 @@ nav ul li a:hover::after {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-
 /*====================================================*/
-            /*pagina animais*/
+/*pagina animais*/
 
 .pagina-animais {
     height: 100vh;
@@ -410,33 +442,6 @@ h1 {
     color: white;
 }
 
-.container-info {
-    display: flex;
-    gap: 10vw;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: var(--laranja-alerta);
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-    gap: 10px;
-}
-
-.info h1 {
-    margin-top: 50px;
-    font-size: 40px;
-    font-family: "Libre Baskeville", serif;
-}
-
-.info p {
-    font-size: 18px;
-    font-family: "Libre Baskeville", serif;
-}
-
 .causas {
     margin-top: 30px;
     display: flex;
@@ -550,32 +555,48 @@ h1 {
 /* PAGINA CONSEQUENCIAS */
 
 @keyframes aparecer {
-    from{
+    from {
         opacity: 0;
         transform: scale(0.6);
     }
-    to{
+    to {
         opacity: 1;
         transform: scale(1);
     }
 }
 
-.inicio-consequencia{
-    background-image: url(/imagens/anta-consequencia.avif);
+.inicio-consequencia {
+    padding-top: 180px;
+    padding-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: flex-start;
+    color: var(--verde-escuro);
+    font-family: "Merriweather", serif;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+        url(../imagens/anta-consequencia.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
 }
+
 .container-consequencias {
     display: flex;
-    justify-content: center; 
-    align-items: flex-start; 
-    gap: 25px; 
-    flex-wrap: wrap; 
-    width: 100%; 
-    max-width: 1200px; 
-    margin: 40px auto; 
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
 .card-consequencias {
-    width: 380px; 
+    width: 380px;
     background-color: #ffffff;
     border-radius: 25px;
     overflow: hidden;
@@ -587,15 +608,15 @@ h1 {
     animation-timeline: view();
 }
 
-.card-consequencias:nth-child(3n + 1) { 
+.card-consequencias:nth-child(3n + 1) {
     animation-range: entry 0% cover 20%;
 }
 
-.card-consequencias:nth-child(3n + 2) { 
-   animation-range: entry 5% cover 25%;
+.card-consequencias:nth-child(3n + 2) {
+    animation-range: entry 5% cover 25%;
 }
 
-.card-consequencias:nth-child(3n + 3) { 
+.card-consequencias:nth-child(3n + 3) {
     animation-range: entry 10% cover 30%;
 }
 
@@ -606,12 +627,50 @@ h1 {
     flex-direction: column;
     justify-content: space-between; /* Empurra o ícone para cima e o texto para baixo */
     align-items: flex-start; /* Alinha tudo à esquerda */
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
-        url(../imagens/araras-azul.jpg); /* Verifique se o caminho está certo! */
     background-size: cover;
     background-position: center;
     color: white;
+}
+/* Card 1 - Desequilíbrio da Fauna */
+.card-consequencias:nth-child(1) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/ninho-vazio.jpg);
+}
+
+/* Card 2 - Multiplicação de Pragas */
+.card-consequencias:nth-child(2) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/joaninha-comendo.webp);
+}
+
+/* Card 3 - Perda de Serviços */
+.card-consequencias:nth-child(3) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/flor.jpg);
+}
+
+/* Card 4 - Invasão nas Cidades */
+.card-consequencias:nth-child(4) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/onca-urbana.jpg);
+}
+
+/* Card 5 - Efeito Borboleta */
+.card-consequencias:nth-child(5) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/borboleta.jpg);
+}
+
+/* Card 6 - Ameaça ao Futuro */
+.card-consequencias:nth-child(6) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/floresta-por-sol.jpg);
 }
 
 .icon-box {
@@ -626,14 +685,21 @@ h1 {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.icon-box img {
+    width: 45px;
+    height: 45px;
+
+    filter: brightness(0) invert(1);
+}
+
 .header-text {
-    text-align: left; 
+    text-align: left;
 }
 
 .percentage {
     font-size: 42px;
     font-weight: 800;
-    display: block; 
+    display: block;
 }
 
 .subtext {
@@ -643,7 +709,7 @@ h1 {
 
 .card-body {
     padding: 30px 25px;
-    text-align: left; 
+    text-align: left;
 }
 
 .card-body h3 {
