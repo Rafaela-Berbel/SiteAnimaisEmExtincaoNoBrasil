@@ -27,8 +27,7 @@ header {
     padding: 20px;
     z-index: 10;
     background: var(--verde-claro);
-    opacity: 0.7;
-    backdrop-filter: blur(1px);
+    opacity: 0.8;
     border-radius: 30px;
     transform: translate(-50%);
 }
@@ -70,6 +69,186 @@ nav ul li a:hover::after {
 }
 .destaque::after {
     width: 100%;
+}
+
+.p-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--fundo-claro);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    animation: loader-fade 2s ease-in forwards;
+}
+
+.p-loader img {
+    width: 250px;
+
+    animation: intro-animal 2s ease-in forwards;
+
+    will-change: transform, opacity;
+    transform-origin: center;
+}
+
+@keyframes intro-animal {
+    0% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes loader-fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.container-info {
+    display: flex;
+    gap: 10vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--laranja-alerta);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.info-consequencia {
+    flex-direction: row;
+}
+
+.info h1 {
+    margin-top: 50px;
+    font-size: 35px;
+    font-family: "Libre Baskeville", serif;
+    color: var(--laranja-alerta);
+}
+
+.info p {
+    font-size: 18px;
+    font-family: "Libre Baskeville", serif;
+}
+
+.rodape-site {
+    background-color: var(--verde-escuro); /* Confirme se essa variável existe no seu projeto! */
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha as colunas no topo */
+}
+
+.rodape-col {
+    flex: 1;
+    min-width: 250px; 
+}
+
+.rodape-titulo {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+.rodape-subtitulo {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--verde-claro); /* Confirme se essa variável também existe! */
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.rodape-texto {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cbd5e1; 
+    margin: 0;
+}
+
+/* Reset da lista (tira as bolinhas brancas) */
+.rodape-col ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.rodape-col ul li {
+    margin-bottom: 12px;
+}
+
+/* Força os links a não serem azuis e sublinhados */
+.rodape-col ul li a {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #cbd5e1 !important; 
+    text-decoration: none !important; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.rodape-col ul li a:hover {
+    color: var(--verde-claro) !important;
+    transform: translateX(4px); 
+}
+
+.rodape-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 20px 20px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.rodape-bottom p {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
 }
 
 /*página inicial*/
@@ -124,7 +303,7 @@ nav ul li a:hover::after {
     top: 5px;
     width: 3px;
     height: 100%;
-    background-color: var(--verde-medio);
+    background-color: var(--verde-claro);
     border-radius: 2px;
 }
 .inicio a {
@@ -194,7 +373,10 @@ nav ul li a:hover::after {
 .sobre-figura {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
+/*====================================================*/
 /*pagina animais*/
+
 .pagina-animais {
     height: 100vh;
     background: var(--fundo-claro);
@@ -277,38 +459,41 @@ h1 {
     padding: 5px 0;
     text-align: center;
 }
+
 /*=================================================================================================================*/
-                                        /*PAGINA CAUSAS*/
- @keyframes mostrar-direita{
-    from{
+/*PAGINA CAUSAS*/
+@keyframes mostrar-direita {
+    from {
         opacity: 0;
         transform: translateX(0) scale(0.6);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateX(150px) scale(1);
     }
 }
 
- @keyframes mostrar-esquerda{
-    from{
+@keyframes mostrar-esquerda {
+    from {
         opacity: 0;
         transform: translateX(0) scale(0.6);
     }
-    to{
+    to {
         opacity: 1;
         transform: translateX(-150px) scale(1);
     }
 }
 
-.desloca-direita, .mini-direita{
+.desloca-direita,
+.mini-direita {
     animation: mostrar-direita linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
 }
 
+.desloca-esquerda,
+.mini-esquerda {
 
-.desloca-esquerda, .mini-esquerda{
     animation: mostrar-esquerda linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
@@ -341,7 +526,7 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     line-height: 1.2;
-    color: var(--verde-escuro);
+    color: white;
 }
 
 .conteudo-causas p {
@@ -349,34 +534,7 @@ h1 {
     margin-left: 100px;
     max-width: none;
     font-size: 20px;
-    color: var(--verde-escuro);
-}
-
-.container-info {
-    display: flex;
-    gap: 10vw;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: var(--laranja-alerta);
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-    gap: 10px;
-}
-
-.info h1 {
-    margin-top: 50px;
-    font-size: 40px;
-    font-family: "Libre Baskeville", serif;
-}
-
-.info p {
-    font-size: 18px;
-    font-family: "Libre Baskeville", serif;
+    color: white;
 }
 
 .causas {
@@ -473,7 +631,7 @@ h1 {
 .imagem-mini img {
     height: 80px;
     width: auto;
-    background-color:  rgba(183, 228, 199, 0.4);
+    background-color: rgba(183, 228, 199, 0.4);
     border-radius: 10px;
 }
 
@@ -487,5 +645,318 @@ h1 {
     justify-content: flex-end;
 }
 
+/*=================================================================================*/
 
-/*=================================================================================================================*/
+/* PAGINA CONSEQUENCIAS */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.inicio-consequencia {
+    padding-top: 180px;
+    padding-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: flex-start;
+    color: var(--verde-escuro);
+    font-family: "Merriweather", serif;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+        url(../imagens/anta-consequencia.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.container-consequencias {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.card-consequencias {
+    width: 380px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: "Inter", sans-serif;
+    border: 1px solid #e0e7e1;
+
+    animation: aparecer linear both;
+    animation-timeline: view();
+}
+
+.card-consequencias:nth-child(3n + 1) {
+    animation-range: entry 0% cover 20%;
+}
+
+.card-consequencias:nth-child(3n + 2) {
+    animation-range: entry 5% cover 25%;
+}
+
+.card-consequencias:nth-child(3n + 3) {
+    animation-range: entry 10% cover 30%;
+}
+
+.card-header {
+    height: 250px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o ícone para cima e o texto para baixo */
+    align-items: flex-start; /* Alinha tudo à esquerda */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+/* Card 1 - Desequilíbrio da Fauna */
+.card-consequencias:nth-child(1) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/ninho-vazio.jpg);
+}
+
+/* Card 2 - Multiplicação de Pragas */
+.card-consequencias:nth-child(2) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/joaninha-comendo.webp);
+}
+
+/* Card 3 - Perda de Serviços */
+.card-consequencias:nth-child(3) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/flor.jpg);
+}
+
+/* Card 4 - Invasão nas Cidades */
+.card-consequencias:nth-child(4) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/onca-urbana.jpg);
+}
+
+/* Card 5 - Efeito Borboleta */
+.card-consequencias:nth-child(5) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/borboleta.jpg);
+}
+
+/* Card 6 - Ameaça ao Futuro */
+.card-consequencias:nth-child(6) .card-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+        url(../imagens/floresta-por-sol.jpg);
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.icon-box img {
+    width: 45px;
+    height: 45px;
+
+    filter: brightness(0) invert(1);
+}
+
+.header-text {
+    text-align: left;
+}
+
+.percentage {
+    font-size: 42px;
+    font-weight: 800;
+    display: block;
+}
+
+.subtext {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-body {
+    padding: 30px 25px;
+    text-align: left;
+}
+
+.card-body h3 {
+    color: #01281f;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*==============================================================================*/
+/* RESPONSIVIDADE */
+
+/* Ajustes para Tablets (telas até 1024px) */
+@media (max-width: 1024px) {
+    header {
+        width: 95%;
+    }
+
+    .sobre {
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .texto-sobre,
+    .sobre-figura {
+        width: 100%;
+    }
+
+    .informacoes {
+        height: auto;
+        padding: 80px 40px;
+    }
+
+    .terrestres,
+    .aquaticos,
+    .aereos {
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .pagina-animais {
+        height: auto;
+        padding-bottom: 50px;
+    }
+}
+
+/* Ajustes para Celulares (telas até 768px) */
+@media (max-width: 768px) {
+    header {
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    /* Página Inicial */
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .inicio p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    /* Página de Causas */
+    .inicio-causas {
+        height: auto;
+        padding: 120px 20px 40px 20px;
+        align-items: center;
+    }
+
+    .conteudo-causas h1 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .conteudo-causas p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .container-info {
+        gap: 30px;
+    }
+
+    /* Seções de Causas (Removendo os deslocamentos laterais que quebram o scroll) */
+    .pagina-causas {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .invertida {
+        flex-direction: column;
+    }
+
+    .desloca-esquerda,
+    .desloca-direita {
+        transform: translateX(0); /* Remove o deslocamento no mobile */
+    }
+
+    .pagina-causas img {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .conteudo-principais {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Ajuste de altura geral para seções que eram 100vh */
+    .inicio,
+    .informacoes,
+    .pagina-animais {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+/* Ajustes extras para telas muito pequenas (320px - 480px) */
+@media (max-width: 480px) {
+    .inicio h1 {
+        font-size: 32px;
+    }
+
+    .texto-sobre h1,
+    h1 {
+        font-size: 38px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
