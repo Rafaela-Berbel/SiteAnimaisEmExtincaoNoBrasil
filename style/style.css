@@ -493,6 +493,7 @@ h1 {
 
 .desloca-esquerda,
 .mini-esquerda {
+
     animation: mostrar-esquerda linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
@@ -816,6 +817,157 @@ h1 {
     color: #555;
     font-size: 14px;
     line-height: 1.6;
+}
+
+
+/* =========================================
+   PÁGINA: COMO AJUDAR
+   ========================================= */
+
+.tudo-ajudar {
+    padding-bottom: 60px;
+}
+
+.container-acoes {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.acao-card {
+    background-color: var(--verde-medio);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 40px 30px;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.acao-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde-claro);
+}
+
+.acao-numero {
+    font-family: "Merriweather", serif;
+    font-size: 48px;
+    color: var(--verde-claro);
+    opacity: 0.3;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    line-height: 1;
+}
+
+.acao-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.acao-card p {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.secao-organizacoes {
+    padding: 60px 0;
+    background-color: var(--verde-medio);
+}
+
+.titulo-organizacoes {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.titulo-organizacoes p {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--verde-claro);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.titulo-organizacoes h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    color:rgb(0, 0, 0);
+    margin: 0;
+}
+
+.ongs-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.ong-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #0b1a14; /* Tom de verde muito escuro, quase preto */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Bordinha bem sutil */
+    border-radius: 8px;
+    padding: 24px;
+    text-decoration: none; /* Tira o sublinhado do link */
+    transition: all 0.3s ease;
+}
+
+.ong-card:hover {
+    background-color: #122920; /* Fica um pouco mais claro ao passar o mouse */
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px); /* Dá um pulinho pra cima */
+}
+
+.ong-icone {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.ong-info {
+    flex: 1;
+}
+
+.ong-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    color: #e2e8f0;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icone-link {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #ffd700; /* Dourado/Amarelado igual na sua imagem */
+    font-weight: normal;
+}
+
+.ong-info p {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #94a3b8; /* Cor de texto mais apagada para a descrição */
+    margin: 0;
+    line-height: 1.5;
 }
 
 /*==============================================================================*/
