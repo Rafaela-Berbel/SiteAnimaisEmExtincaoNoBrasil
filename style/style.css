@@ -819,6 +819,69 @@ h1 {
     line-height: 1.6;
 }
 
+
+/* =========================================
+   PÁGINA: COMO AJUDAR
+   ========================================= */
+
+.tudo-ajudar {
+    padding-bottom: 60px;
+}
+
+.container-acoes {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.acao-card {
+    background-color: #1e293b; /* Um fundo levemente diferente para destacar, se você usar fundo escuro no site */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 40px 30px;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.acao-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--verde-claro);
+}
+
+.acao-numero {
+    font-family: "Special Elite", cursive; /* Usa aquela fonte de máquina de escrever que você chamou no head */
+    font-size: 48px;
+    color: var(--verde-claro);
+    opacity: 0.3;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    line-height: 1;
+}
+
+.acao-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.acao-card p {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
 /*==============================================================================*/
 /* RESPONSIVIDADE */
 
