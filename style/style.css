@@ -157,6 +157,100 @@ nav ul li a:hover::after {
     font-family: "Libre Baskeville", serif;
 }
 
+.rodape-site {
+    background-color: var(--verde-escuro); /* Confirme se essa variável existe no seu projeto! */
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha as colunas no topo */
+}
+
+.rodape-col {
+    flex: 1;
+    min-width: 250px; 
+}
+
+.rodape-titulo {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+.rodape-subtitulo {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--verde-claro); /* Confirme se essa variável também existe! */
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.rodape-texto {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cbd5e1; 
+    margin: 0;
+}
+
+/* Reset da lista (tira as bolinhas brancas) */
+.rodape-col ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.rodape-col ul li {
+    margin-bottom: 12px;
+}
+
+/* Força os links a não serem azuis e sublinhados */
+.rodape-col ul li a {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #cbd5e1 !important; 
+    text-decoration: none !important; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.rodape-col ul li a:hover {
+    color: var(--verde-claro) !important;
+    transform: translateX(4px); 
+}
+
+.rodape-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 20px 20px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.rodape-bottom p {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+}
+
 /*página inicial*/
 .inicio {
     padding-top: 180px;
