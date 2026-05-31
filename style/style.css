@@ -81,6 +81,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* CORREÇÃO: pointer-events: none evita que o loader bloqueie cliques após sumir */
 .p-loader {
     position: fixed;
     top: 0;
@@ -268,6 +269,7 @@ nav ul li a:hover::after {
     background-image: url(../imagens/b20547d2-b8cf-43c0-a466-2c68dca2ce6d.png);
     background-size: cover;
     background-position: center;
+    /* CORREÇÃO: min-height evita corte de conteúdo */
     min-height: 100vh;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
@@ -334,6 +336,7 @@ nav ul li a:hover::after {
 
 .informacoes {
     background: var(--fundo-claro);
+    /* CORREÇÃO: min-height evita corte de conteúdo */
     min-height: 100vh;
     padding: 140px 120px;
 }
@@ -393,6 +396,7 @@ nav ul li a:hover::after {
 /* PÁGINA ANIMAIS */
 
 .pagina-animais {
+    /* CORREÇÃO: min-height evita corte de conteúdo */
     min-height: 100vh;
     background: var(--fundo-claro);
     padding-bottom: 60px;
@@ -503,6 +507,11 @@ h1 {
     }
 }
 
+/*
+ * CORREÇÃO: @supports garante fallback para Firefox e Safari,
+ * onde animation-timeline: view() não é suportado.
+ * Sem suporte, os elementos aparecem normalmente sem animação.
+ */
 @supports (animation-timeline: view()) {
     .desloca-direita,
     .mini-direita {
@@ -539,6 +548,7 @@ h1 {
         url(../imagens/veado-em-chamas.jpg);
     background-size: cover;
     background-position: center;
+    /* CORREÇÃO: min-height evita corte de conteúdo */
     min-height: 70vh;
 }
 
@@ -571,6 +581,7 @@ h1 {
 }
 
 .causas h2 {
+    /* CORREÇÃO: 200px era excessivo e hardcoded */
     margin-top: 4rem;
     font-size: 1.25rem;
     font-family: "Merriweather", serif;
@@ -702,6 +713,7 @@ h1 {
         url(../imagens/anta-consequencia.jpg);
     background-size: cover;
     background-position: center;
+    /* CORREÇÃO: min-height evita corte de conteúdo */
     min-height: 70vh;
 }
 
@@ -726,6 +738,7 @@ h1 {
     border: 1px solid #e0e7e1;
 }
 
+/* CORREÇÃO: animações de scroll dentro de @supports para garantir fallback */
 @supports (animation-timeline: view()) {
     .card-consequencias {
         animation: aparecer linear both;
@@ -814,6 +827,7 @@ h1 {
 .icon-box img {
     width: 45px;
     height: 45px;
+    /* CORREÇÃO: "1f" não é valor CSS válido — corrigido para invert(1) */
     filter: brightness(0) invert(1);
 }
 
@@ -863,11 +877,16 @@ h1 {
     gap: 30px;
     align-items: flex-start;
     font-family: "Merriweather", serif;
+    /*
+     * CORREÇÃO: linear-gradient estava sem o segundo valor de cor e sem vírgula
+     * antes da url() — sintaxe inválida que impedia a imagem de carregar.
+     */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
         url(../imagens/boto_agua_doce.png);
     background-size: cover;
     background-position: center;
+    /* CORREÇÃO: min-height evita corte de conteúdo */
     min-height: 70vh;
 }
 
@@ -1021,6 +1040,7 @@ h1 {
 
 .secao-organizacoes {
     background-color: #0d3524;
+    /* CORREÇÃO: padding: 60px auto é inválido — auto não funciona em padding */
     padding: 60px 0;
     margin-bottom: 0;
 }
@@ -1043,6 +1063,7 @@ h1 {
 .titulo-organizacoes h2 {
     font-family: "Playfair Display", serif;
     font-size: 2.25rem;
+    /* CORREÇÃO: color: black era ilegível sobre fundo escuro (#0d3524) */
     color: #ffffff;
     margin: 0;
 }
@@ -1200,6 +1221,10 @@ h1 {
         flex-direction: column;
     }
 
+    /*
+     * CORREÇÃO: inclui .mini-esquerda e .mini-direita no reset,
+     * evitando scroll horizontal no mobile.
+     */
     .desloca-esquerda,
     .desloca-direita,
     .mini-esquerda,
