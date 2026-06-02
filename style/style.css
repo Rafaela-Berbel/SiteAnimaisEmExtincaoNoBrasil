@@ -218,7 +218,7 @@ nav ul li a:hover::after {
 }
 
 .rodape-site {
-    background-color: var(--verde-escuro); /* Confirme se essa variável existe no seu projeto! */
+    background-color: var(--verde-escuro); 
     color: #ffffff;
     padding: 60px 0 20px 0;
     margin-top: 80px;
@@ -365,7 +365,10 @@ nav ul li a:hover::after {
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    color: white; /* Mudado para branco para contraste  */
+    color: white;
+}
+.conteudo h1{
+    color: white;
 }
 
 .inicio h1 {
