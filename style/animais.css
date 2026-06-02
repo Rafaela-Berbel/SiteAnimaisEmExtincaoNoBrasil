@@ -1,0 +1,501 @@
+/*GERAL*/
+:root {
+    --fundo-claro: #f8f9fa;
+    --verde-escuro: #01281f;
+    --verde-medio: #1b4332;
+    --verde-claro: #b7e4c7;
+    --caixa-destaque: #b8d8ba;
+    --rosa-alerta: rgb(255, 0, 102);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+    background: var(--verde-claro);
+    opacity: 0.8;
+    border-radius: 30px;
+    transform: translate(-50%);
+}
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--verde-escuro);
+    font-size: 0.95rem;
+    position: relative;
+    display: inline-block;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+nav ul li a:hover {
+    transform: scale(1.08);
+    opacity: 0.8;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.destaque {
+    font-weight: 500;
+}
+.destaque::after {
+    width: 100%;
+}
+.hero-animal{
+    height:75vh;
+    display:flex;
+    align-items:center;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.hero-terrestre{
+    background-image:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("../imagens/terrestres/tatu-bola.jpg");
+}
+
+.hero-aquatico{
+    background-image:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("../imagens/aquaticos/tartaruga-no-lixo.png");
+}
+
+.hero-aereo{
+    background-image:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("../imagens/aereos/aves-ameaçadas.jpg");
+}
+
+.conteudo-animais{
+    margin-left:90px;
+    max-width:750px;
+}
+
+.conteudo-animais h1{
+    color:white;
+    font-size:75px;
+    margin-bottom:25px;
+    font-family:"Merriweather", serif;
+}
+
+.conteudo-animais p{
+    color:white;
+    line-height:1.8;
+    font-size:20px;
+    border-left:4px solid var(--verde-claro);
+    padding-left:20px;
+}
+
+/*
+   ESTATÍSTICAS
+ */
+
+.container-info{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    padding:80px 20px;
+}
+
+.info{
+    text-decoration:none;
+    width:230px;
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.info:hover{
+    transform:translateY(-8px);
+}
+
+.info h1{
+    color:var(--rosa-alerta);
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.info p{
+    color:var(--verde-escuro);
+    line-height:1.5;
+}
+
+/*
+   ANIMAL PRINCIPAL
+ */
+
+.animal-principal{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:60px;
+    padding:60px 40px;
+}
+
+.animal-principal img{
+    width:420px;
+    height:420px;
+    object-fit:cover;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.texto-animal{
+    flex:1;
+}
+
+.texto-animal h2{
+    font-size:50px;
+    margin-bottom:25px;
+    color:var(--verde-escuro);
+}
+
+.texto-animal p{
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+.texto-animal ul{
+    list-style:none;
+}
+
+.texto-animal li{
+    margin-bottom:12px;
+    background:rgba(183,228,199,.3);
+    padding:12px 18px;
+    border-radius:12px;
+}
+
+/*
+   BOTÃO
+*/
+
+.container-botao{
+    display:flex;
+    justify-content:center;
+    margin-bottom:100px;
+}
+
+.btn-animais{
+    text-decoration:none;
+    background:var(--verde-medio);
+    color:white;
+    padding:16px 35px;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.btn-animais:hover{
+    background:var(--verde-escuro);
+    transform:translateY(-4px);
+}
+
+/*
+   GRÁFICO*/
+
+.estatisticas{
+    padding:120px 40px;
+    background:var(--verde-escuro);
+}
+
+.estatisticas h2{
+    text-align:center;
+    color:white;
+    font-size:46px;
+    margin-bottom:15px;
+}
+
+.subtitulo-grafico{
+    text-align:center;
+    color:white;
+    opacity:.8;
+    margin-bottom:60px;
+}
+
+.grafico{
+    max-width:1000px;
+    margin:auto;
+}
+
+.barra-item{
+    margin-bottom:35px;
+}
+
+.barra-item span{
+    display:block;
+    color:white;
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+.barra{
+    width:100%;
+    height:28px;
+    background:rgba(255,255,255,.15);
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.preenchimento{
+    height:100%;
+    border-radius:30px;
+}
+
+/* terrestres */
+
+.mata{
+    width:24.1%;
+    background:#52b788;
+}
+
+.pampa{
+    width:13.7%;
+    background:#74c69d;
+}
+
+.mamiferos{
+    width:13.3%;
+    background:#95d5b2;
+}
+
+.repteis{
+    width:4.3%;
+    background:#d8f3dc;
+}
+
+/* aquáticos */
+
+.poluicao{
+    width:35%;
+    background:#1b6ca8;
+}
+
+.pesca{
+    width:21%;
+    background:#2a9df4;
+}
+
+.ameacadas{
+    width:18%;
+    background:#58b4ff;
+}
+
+.critico-mar{
+    width:12%;
+    background:#9ad1ff;
+}
+
+/* aéreos */
+
+.habitat{
+    width:20%;
+    background:#52b788;
+}
+
+.trafico{
+    width:15%;
+    background:#74c69d;
+}
+
+.aves{
+    width:11%;
+    background:#95d5b2;
+}
+
+.risco{
+    width:8%;
+    background:#d8f3dc;
+}
+
+/*
+   TABELA
+*/
+
+.tabela-animais{
+    padding:120px 40px;
+}
+.tabela-animais h2{
+    text-align:center;
+    font-size:46px;
+    margin-bottom:50px;
+    color:var(--verde-escuro);
+}
+
+.container-tabela{
+    max-width:1200px;
+    margin:auto;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+th{
+    background:var(--verde-medio);
+    color:white;
+    padding:22px;
+    font-size:18px;
+}
+
+td{
+    padding:18px;
+    text-align:center;
+    border-bottom:1px solid #ececec;
+}
+
+tr{
+    transition:.3s;
+}
+
+tr:hover{
+    background:rgba(183,228,199,.18);
+}
+
+td img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid var(--verde-claro);
+}
+
+/* STATUS */
+
+.perigo{
+    color:#d97706;
+    font-weight:700;
+}
+
+.alerta{
+    color:#e11d48;
+    font-weight:700;
+}
+
+.critico{
+    color:#b91c1c;
+    font-weight:700;
+}
+
+/*
+   ANIMAÇÕES GERAIS
+*/
+
+/* Faz as seções aparecerem suavemente de baixo para cima */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-animal, .container-info, .animal-principal, .estatisticas, .tabela-animais {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Efeito flutuante para a foto redonda do animal principal */
+@keyframes flutuar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.animal-principal img {
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+/* Animação para as barras do gráfico enchendo da esquerda para a direita */
+@keyframes encherBarra {
+    from { width: 0; }
+}
+
+.preenchimento {
+    animation: encherBarra 1.5s ease-out forwards;
+}
+
+.botoes-navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px 0;
+    background-color: var(--fundo-claro);
+}
+
+.btn-nav {
+    text-decoration: none;
+    background: white;
+    color: var(--verde-escuro);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid var(--verde-claro);
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.btn-nav:hover {
+    background: var(--verde-claro);
+    transform: scale(1.05);
+}
+
+/*NOVAS CORES DOS GRÁFICOS */
+
+/* Causas Terrestres */
+.desmatamento { width: 45%; background: #e63946; }
+.caca { width: 25%; background: #f4a261; }
+.atropelamento { width: 15%; background: #e9c46a; }
+.expansao { width: 15%; background: #2a9d8f; }
+
+/* Causas Aquáticas */
+.plastico { width: 40%; background: #0077b6; }
+.oleo { width: 25%; background: #023e8a; }
+.pesca-fantasma { width: 20%; background: #00b4d8; }
+.aquecimento { width: 15%; background: #90e0ef; }
+
+/* Causas Aéreas (Cores em tons de verde e amarelo para diferenciar) */
+.perda-ninho { width: 40%; background: #2d6a4f; }
+.trafico-aves { width: 30%; background: #40916c; }
+.colisao { width: 20%; background: #52b788; }
+.agrotoxico { width: 10%; background: #74c69d; }

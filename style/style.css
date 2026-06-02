@@ -1,11 +1,13 @@
-/*GERAL*/
+/*
+   1. VARIÁVEIS E GERAL
+ */
 :root {
     --fundo-claro: #f8f9fa;
     --verde-escuro: #01281f;
     --verde-medio: #1b4332;
     --verde-claro: #b7e4c7;
     --caixa-destaque: #b8d8ba;
-    --laranja-alerta: #f4a261;
+    --rosa-alerta: rgb(255, 0, 102);
 }
 
 * {
@@ -13,9 +15,59 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
+/*
+   2. ANIMAÇÕES E CLASSES UTILITÁRIAS (KEYFRAMES)
+*/
+@keyframes mostrar-direita {
+    from {
+        opacity: 0;
+        transform: translateX(0) scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(150px) scale(1);
+    }
+}
+
+@keyframes mostrar-esquerda {
+    from {
+        opacity: 0;
+        transform: translateX(0) scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-150px) scale(1);
+    }
+}
+
+.desloca-direita, 
+.mini-direita {
+    animation: mostrar-direita linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    transform: translateX(100px); /* Mantido do seu código original */
+}
+
+.desloca-esquerda, 
+.mini-esquerda {
+    animation: mostrar-esquerda linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+    transform: translateX(-100px); /* Mantido do seu código original */
+}
+
+.invertida {
+    flex-direction: row-reverse;
+}
+
+/*
+   3. CABEÇALHO E NAVEGAÇÃO (HEADER)
+*/
 header {
     position: fixed;
     top: 20px;
@@ -31,6 +83,7 @@ header {
     border-radius: 30px;
     transform: translate(-50%);
 }
+
 nav ul {
     display: flex;
     gap: 40px;
@@ -43,14 +96,14 @@ nav ul li a {
     font-size: 0.95rem;
     position: relative;
     display: inline-block;
-    transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
 nav ul li a:hover {
     transform: scale(1.08);
     opacity: 0.8;
 }
+
 nav ul li a::after {
     content: "";
     position: absolute;
@@ -58,15 +111,18 @@ nav ul li a::after {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: var(--verde-medio);
-    transition: 0.3s;
+    background-color: currentColor;
+    transition: width 0.3s ease;
 }
+
 nav ul li a:hover::after {
     width: 100%;
 }
+
 .destaque {
     font-weight: 500;
 }
+
 .destaque::after {
     width: 100%;
 }
@@ -124,6 +180,10 @@ nav ul li a:hover::after {
     }
 }
 
+
+/* 
+   4. COMPONENTES REUTILIZÁVEIS
+*/
 .container-info {
     display: flex;
     gap: 10vw;
@@ -256,112 +316,179 @@ nav ul li a:hover::after {
     padding-top: 180px;
     padding-bottom: 30px;
     position: relative;
+    color: var(--rosa-alerta);
+}
+
+.info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 30px;
+    text-align: center;
+    gap: 10px;
+}
+
+.info h1 {
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: "Libre Baskerville", serif;
+}
+
+.info p {
+    font-size: 18px;
+    font-family: "Libre Baskerville", serif;
+}
+
+/*
+   5. PÁGINA: INÍCIO
+ */
+.inicio {
+    padding-top: 140px;
+    padding-bottom: 60px;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza melhor o conteúdo na tela */
+    gap: 20px;
     align-items: center;
-    color: #013227;
-    font-family: "Inter", sans-serif;
-    background-image: url(../imagens/b20547d2-b8cf-43c0-a466-2c68dca2ce6d.png);
+    /* Gradiente mais escuro para o texto branco se destacar, mantendo o tom verde */
+    background-image: linear-gradient(rgba(1, 40, 31, 0.65), rgba(1, 40, 31, 0.8)), url(../imagens/amazonia.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Efeito Parallax - A imagem fica fixa ao rolar */
     height: 100vh;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
+
 .conteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 25px;
+    color: white; /* Mudado para branco para contraste  */
 }
+
 .inicio h1 {
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Merriweather", serif; /* Padronizado com o título das outras páginas */
     font-size: 64px;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
     line-height: 1.1;
-    opacity: 0.85;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
 }
+
 .inicio p {
     position: relative;
-    margin: 0 auto;
-    font-size: 16px;
-    max-width: 420px;
-    margin-bottom: 25px;
-
-    color: var(--verde-escuro);
+    margin: 0 auto 20px;
+    font-size: 18px; 
+    max-width: 580px; 
+    color: #e9ecef; 
     padding-left: 25px;
     line-height: 1.7;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Libre Baskerville", serif;
 }
+
 .inicio p::before {
     content: "";
     position: absolute;
     left: 0;
     top: 5px;
-    width: 3px;
+    width: 4px;
     height: 100%;
     background-color: var(--verde-claro);
     border-radius: 2px;
 }
+
+/* Animação para o botão  */
+@keyframes flutuar-botao {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(12px); }
+}
+
 .inicio a {
-    position: absolute;
-    bottom: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
     text-decoration: none;
-    padding: 10px 26px;
-    border: 1px solid var(--verde-medio);
+    padding: 12px 32px;
+    border: 2px solid var(--verde-claro);
     border-radius: 30px;
-    color: var(--verde-medio);
-    transition: 0.3s;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(3px);
-}
-.inicio a:hover {
-    background-color: var(--verde-medio);
-    color: white;
-}
-.informacoes {
-    background: var(--fundo-claro);
-    height: 100vh;
-    padding: 140px 120px;
-}
-.sobre {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 80px;
-    padding: 30px;
-    margin: auto;
-    background: var(--caixa-destaque);
+    color: var(--verde-claro);
+    font-weight: 600;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    animation: flutuar-botao 2s infinite ease-in-out; /* Chama a animação */
 }
+
+.inicio a:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    transform: scale(1.05);
+    animation-play-state: paused; /* Para de pular quando passa o mouse */
+}
+
+
+/*
+   SEÇÃO SOBRE 
+ */
+
+.informacoes {
+    padding: 100px 20px;
+    background-color: var(--fundo-claro);
+}
+
+.sobre {
+    /* O Grid divide o espaço em duas colunas rígidas: 60% para texto, 40% para imagem */
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 60px; /* Distância exata entre texto e imagem */
+    align-items: center;
+    
+    /* Estilo do card de vidro */
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(12px);
+    padding: 60px;
+    border-radius: 32px;
+    max-width: 1100px;
+    margin: 0 auto; /* Centraliza o card na tela */
+    box-shadow: 0 20px 50px rgba(1, 40, 31, 0.08);
+}
+
 .texto-sobre {
-    width: 60%;
-    background: var(--verde-claro);
-    border-radius: 10px;
-    padding: 30px;
+    /* Removemos flexbox e larguras, o Grid já controla isso */
+    position: relative;
+    width: 100%;
 }
+
 .texto-sobre h1 {
-    font-size: 70px;
-    margin: 0 0 20px 0;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--verde-escuro);
+    font-family: "Merriweather", serif;
+    font-weight: 700;
 }
+
 .texto-sobre p {
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.7;
     margin-bottom: 20px;
+    font-family: "Libre Baskerville", serif;
+    color: #222;
+    text-align: justify;
 }
+
+.texto-sobre .botao-causas {
+    display: inline-block;
+    margin-top: 15px;
+}
+
 .sobre-figura {
-    background: var(--verde-claro);
-    padding: 20px;
-    border-radius: 20px;
-    width: 40%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .sobre-figura img {
     width: 100%;
     max-width: 400px;
@@ -413,51 +540,185 @@ h1 {
     position: relative;
     width: 100%;
     height: 550px;
+    max-width: 350px; 
+    height: auto; 
     object-fit: cover;
-    transition: transform 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
 }
-.imagem-animais::after {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+/*
+   6. PÁGINA: ANIMAIS
+ */
+.inicio-animais {
+    /* Troque 'fundo-animais.jpg' pela imagem que preferir para o topo desta página */
+    background-image: linear-gradient(rgba(1, 40, 31, 0.7), rgba(1, 40, 31, 0.85)), url(../imagens/animais/lobo-guara.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh; /* Ocupa 70% da altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.conteudo-animais h1 {
+    color: #ffffff;
+    font-family: "Merriweather", serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+}
+
+.conteudo-animais p {
+    color: #e9ecef;
+    font-family: "Libre Baskerville", serif;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 35px auto;
+    line-height: 1.6;
+}
+
+.botao-animais {
+    text-decoration: none;
+    padding: 12px 35px;
+    border: 2px solid var(--verde-claro);
+    border-radius: 30px;
+    color: var(--verde-claro);
+    font-weight: 600;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.botao-animais:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    transform: scale(1.05);
+}
+
+/*
+   ESTATÍSTICAS
+ */
+
+.container-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 80px 20px;
+}
+
+.info {
+    text-decoration: none;
+    width: 230px;
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.info:hover {
+    transform: translateY(-8px);
+}
+
+.info h1 {
+    color: var(--rosa-alerta);
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: var(--verde-escuro);
+    line-height: 1.5;
+}
+
+/* --- 6.3 Introdução aos Cards --- */
+.introducao-cards {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background-color: var(--fundo-claro);
+}
+
+.introducao-cards h2 {
+    font-family: "Merriweather", serif;
+    color: var(--verde-escuro);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.introducao-cards p {
+    font-family: "Libre Baskerville", serif;
+    color: #444;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* --- 6.4 Cards de Animais --- */
+.card-animais {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 40px 80px;
+    background-color: var(--fundo-claro);
+    flex-wrap: wrap; /* Permite que os cards desçam se a tela for pequena */
+}
+
+/* Estilo base para todos os cards */
+.terrestres, .aquaticos, .aereos {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    width: 350px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(1, 40, 31, 0.05);
+}
+
+.terrestres:hover, .aquaticos:hover, .aereos:hover {
+    transform: translateY(-12px); /* Efeito de pular para cima */
+    box-shadow: 0 25px 50px rgba(1, 40, 31, 0.15);
+}
+
+.imagem-animais {
+    width: 100%;
+    height: 250px;
+    overflow: hidden; /* Garante que o zoom da imagem não vaze do card */
+}
+
+.imagem-animais img {
     width: 100%;
     height: 100%;
-}
-.imagem-animais img {
-    position: relative;
-    width: 100%;
-    height: 550px;
     object-fit: cover;
-    transition: transform 0.3s ease;
-    box-shadow: 0 0 0 8px var(--verde-claro);
+    transition: transform 0.5s ease;
 }
-.terrestres:hover img,
-.aquaticos:hover img,
-.aereos:hover img {
-    box-shadow: 0 0 0 6px var(--verde-claro);
+
+/* Efeito de zoom na imagem ao passar o mouse no card */
+.terrestres:hover .imagem-animais img, 
+.aquaticos:hover .imagem-animais img, 
+.aereos:hover .imagem-animais img {
+    transform: scale(1.1);
 }
+
 .tipo-de-animal {
+    padding: 25px;
     text-align: center;
-    margin-top: -40px;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
+    background-color: #ffffff;
 }
+
 .tipo-de-animal h3 {
-    letter-spacing: 1px;
-    font-weight: 500;
-    color: rgb(255, 249, 242);
-    font-size: 22px;
-    background: var(--verde-medio);
-    opacity: 0.6;
-    backdrop-filter: blur(0.2px);
-    display: block;
-    width: 100%;
-    padding: 5px 0;
-    text-align: center;
+    font-family: "Merriweather", serif;
+    color: var(--verde-escuro);
+    font-size: 24px;
+    margin: 0;
 }
 
 /*=================================================================================================================*/
@@ -499,6 +760,10 @@ h1 {
     animation-range: entry 0% cover 20%;
 }
 
+/*
+   7. PÁGINA: CAUSAS
+*/
+
 .inicio-causas {
     padding-top: 180px;
     padding-bottom: 30px;
@@ -510,9 +775,7 @@ h1 {
     align-items: flex-start;
     color: var(--verde-escuro);
     font-family: "Merriweather", serif;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
-        url(../imagens/veado-em-chamas.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../imagens/veado-em-chamas.jpg);
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -534,7 +797,9 @@ h1 {
     margin-left: 100px;
     max-width: none;
     font-size: 20px;
-    color: white;
+
+    color: var(--verde-escuro);
+
 }
 
 .causas {
@@ -543,7 +808,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-family: "Libre Baskeville", serif;
+    font-family: "Libre Baskerville", serif;
 }
 
 .causas h2 {
@@ -551,9 +816,11 @@ h1 {
     font-size: 20px;
     font-family: "Merriweather", serif;
 }
+
 .causas p {
     margin-bottom: 60px;
 }
+
 .pagina-causas {
     display: flex;
     align-items: center;
@@ -566,14 +833,11 @@ h1 {
     border-radius: 20px;
     padding: 30px;
 }
+
 .pagina-causas p {
     max-width: 500px;
     color: var(--verde-escuro);
-    font-family: "Libre Baskeville", serif;
-}
-
-.invertida {
-    flex-direction: row-reverse;
+    font-family: "Libre Baskerville", serif;
 }
 
 .conteudo-principais {
@@ -581,14 +845,6 @@ h1 {
     flex-direction: column;
     gap: 10px;
     max-width: 500px;
-}
-
-.desloca-esquerda {
-    transform: translateX(-100px);
-}
-
-.desloca-direita {
-    transform: translateX(100px);
 }
 
 .pagina-causas-img {
@@ -1023,3 +1279,4 @@ h1 {
         justify-content: center;
     }
 }
+

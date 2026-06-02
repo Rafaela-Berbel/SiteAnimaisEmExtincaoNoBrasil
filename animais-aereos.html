@@ -2,59 +2,158 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Página Animais Aereos</title>
-    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais Terrestres</title>
+    <link rel="stylesheet" href="style/animais.css">
 </head>
 <body>
-    <span class="p-loader"
-            ><img src="./imagens/intro-tartaruga.png" alt=""
-        /></span>
-    <header>
-        <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="animais.html">Animais</a></li>
-                    <li><a href="causas.html">Causas</a></li>
-                    <li><a href="consequencias.html">Consequências</a></li>
-                    <li><a href="comoAjudar.html">Como Ajudar</a></li>
-                </ul>   
-        </nav>
-    </header>
-
-      <footer class="rodape-site">
-    <div class="rodape-container">
-        
-        <div class="rodape-col">
-            <h3 class="rodape-titulo">Preserve Brasil</h3>
-            <p class="rodape-texto">
-                Um projeto dedicado a conscientizar e agir contra a extinção em massa da fauna brasileira. Cada voz conta para manter nossa biodiversidade viva.
-            </p>
-        </div>
-
-        <div class="rodape-col">
-            <h4 class="rodape-subtitulo">Navegação</h4>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="animais.html">Animais</a></li>
-                <li><a href="causas.html">Causas</a></li>
-                <li><a href="consequencias.html">Consequências</a></li>
-                <li><a href="comoAjudar.html">Como Ajudar</a></li>
-            </ul>
-        </div>
-        <div class="rodape-col">
-    <h4 class="rodape-subtitulo">Preservar é Viver</h4>
-    <p class="rodape-texto">
-        A destruição dos habitats e as queimadas estão silenciando as nossas florestas. 
-        Proteger a fauna brasileira não é apenas salvar os animais, é garantir o equilíbrio 
-        do nosso próprio futuro. A mudança começa na conscientização.
-    </p>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="animais.html">Animais</a></li>
+            <li><a href="causas.html">Causas</a></li>
+            <li><a href="consequencias.html">Consequências</a></li>
+            <li><a href="comoAjudar.html">Como Ajudar</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="hero-animal hero-aereo">
+    <div class="conteudo-animais">
+        <h1>Animais Aéreos</h1>
+        <p>
+            As aves desempenham um papel essencial na manutenção dos
+            ecossistemas, contribuindo para a dispersão de sementes,
+            polinização e equilíbrio das cadeias alimentares. Entretanto,
+            diversas espécies enfrentam ameaças causadas pela ação humana.
+        </p>
+    </div>
+</section>
+<div class="botoes-navegacao">
+    <a href="animais-terrestres.html" class="btn-nav"> Ver Animais Terrestres</a>
+    <a href="animais-aquaticos.html" class="btn-nav"> Ver Animais Aquáticos</a>
 </div>
-
+<section class="container-info">
+    <a href="#grafico" class="info">
+        <h1>11%</h1>
+        <p>Aves ameaçadas no Brasil</p>
+    </a>
+    <a href="#grafico" class="info">
+        <h1>20%</h1>
+        <p>Espécies afetadas pela perda de habitat</p>
+    </a>
+    <a href="#grafico" class="info">
+        <h1>15%</h1>
+        <p>Espécies impactadas pelo tráfico</p>
+    </a>
+    <a href="#grafico" class="info">
+        <h1>8%</h1>
+        <p>Aves sob risco crítico</p>
+    </a>
+</section>
+<section class="animal-principal">
+    <img src="imagens/araras-arvore.jpg" alt="Arara Azul">
+    <div class="texto-animal">
+        <h2>Arara-Azul</h2>
+        <p>
+            A arara-azul é uma das aves mais conhecidas da fauna brasileira.
+            Durante muitos anos sofreu com o tráfico de animais silvestres
+            e com a destruição de seu habitat natural.
+        </p>
+        <ul>
+            <li><strong>Habitat:</strong> Pantanal e Cerrado</li>
+            <li><strong>Classe:</strong> Ave</li>
+            <li><strong>Status:</strong> Vulnerável</li>
+        </ul>
     </div>
-
-    <div class="rodape-bottom">
-        <p>&copy; 2026 Preserve Brasil. Todos os direitos reservados para a nossa fauna.</p>
+</section>
+<div class="container-botao">
+    <a href="#tabela" class="btn-animais">
+        Ver mais animais
+    </a>
+</div>
+<section class="estatisticas" id="grafico">
+    <h2>Principais Ameaças aos Animais Aéreos</h2>
+    <p class="subtitulo-grafico">Entenda os fatores que esvaziam os céus brasileiros.</p>
+    <div class="grafico">
+        <div class="barra-item">
+            <span>Perda de Árvores para Ninhos (40%)</span>
+            <div class="barra"><div class="preenchimento perda-ninho"></div></div>
+        </div>
+        <div class="barra-item">
+            <span>Tráfico de Animais Silvestres (30%)</span>
+            <div class="barra"><div class="preenchimento trafico-aves"></div></div>
+        </div>
+        <div class="barra-item">
+            <span>Colisões com Vidros e Fios Elétricos (20%)</span>
+            <div class="barra"><div class="preenchimento colisao"></div></div>
+        </div>
+        <div class="barra-item">
+            <span>Uso de Agrotóxicos no Campo (10%)</span>
+            <div class="barra"><div class="preenchimento agrotoxico"></div></div>
+        </div>
     </div>
-</footer>
+</section>
+<section class="tabela-animais" id="tabela">
+    <h2>Animais Aéreos Ameaçados</h2>
+    <div class="container-tabela">
+        <table>
+            <tr>
+                <th>Foto</th>
+                <th>Animal</th>
+                <th>Habitat</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td><img src="imagens/arara-azul.jpg"></td>
+                <td>Arara-Azul</td>
+                <td>Pantanal</td>
+                <td class="perigo">Vulnerável</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/harpia.jpg"></td>
+                <td>Harpia</td>
+                <td>Amazônia</td>
+                <td class="alerta">Quase Ameaçada</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/papagaio-peito-roxo.jpg"></td>
+                <td>Papagaio-de-Peito-Roxo</td>
+                <td>Mata Atlântica</td>
+                <td class="critico">Em Perigo</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/aguia-cinzenta.jpg"></td>
+                <td>Águia-Cinzenta</td>
+                <td>Mata Atlântica</td>
+                <td class="critico">Em Perigo</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/ararajuba.jpg"></td>
+                <td>Ararajuba</td>
+                <td>Amazônia</td>
+                <td class="perigo">Vulnerável</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/mutum-do-sudeste.jpg"></td>
+                <td>Mutum-do-Sudeste</td>
+                <td>Mata Atlântica</td>
+                <td class="critico">Em Perigo</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/urubu-rei.jpg"></td>
+                <td>Urubu-Rei</td>
+                <td>Florestas Tropicais</td>
+                <td class="alerta">Monitoramento</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/tucano-toco.jpg"></td>
+                <td>Tucano-Toco</td>
+                <td>Cerrado</td>
+                <td class="alerta">Monitoramento</td>
+            </tr>
+        </table>
+    </div>
+</section>
 </body>
 </html>

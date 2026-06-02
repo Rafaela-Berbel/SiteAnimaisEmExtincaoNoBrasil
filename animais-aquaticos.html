@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Página Animais Aquáticos</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/animais.css">
 </head>
 <body>
     <span class="p-loader"
@@ -19,42 +19,156 @@
                     <li><a href="comoAjudar.html">Como Ajudar</a></li>
                 </ul>   
         </nav>
-    </header>
-
-      <footer class="rodape-site">
-    <div class="rodape-container">
-        
-        <div class="rodape-col">
-            <h3 class="rodape-titulo">Preserve Brasil</h3>
-            <p class="rodape-texto">
-                Um projeto dedicado a conscientizar e agir contra a extinção em massa da fauna brasileira. Cada voz conta para manter nossa biodiversidade viva.
-            </p>
-        </div>
-
-        <div class="rodape-col">
-            <h4 class="rodape-subtitulo">Navegação</h4>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="animais.html">Animais</a></li>
-                <li><a href="causas.html">Causas</a></li>
-                <li><a href="consequencias.html">Consequências</a></li>
-                <li><a href="comoAjudar.html">Como Ajudar</a></li>
-            </ul>
-        </div>
-        <div class="rodape-col">
-    <h4 class="rodape-subtitulo">Preservar é Viver</h4>
-    <p class="rodape-texto">
-        A destruição dos habitats e as queimadas estão silenciando as nossas florestas. 
-        Proteger a fauna brasileira não é apenas salvar os animais, é garantir o equilíbrio 
-        do nosso próprio futuro. A mudança começa na conscientização.
-    </p>
+        </header>
+  <section class="hero-animal hero-aquatico">
+    <div class="conteudo-animais">
+        <h1>Animais Aquáticos</h1>
+        <p>
+            Os oceanos, rios e lagos abrigam uma enorme diversidade de vida.
+            Entretanto, a poluição, a pesca predatória e as mudanças climáticas
+            colocam inúmeras espécies aquáticas em situação de risco.
+        </p>
+    </div>
+</section>
+<div class="botoes-navegacao">
+    <a href="animais-terrestres.html" class="btn-nav">Ver Animais Terrestres</a>
+    <a href="animais-aereos.html" class="btn-nav">Ver Animais Aéreos</a>
 </div>
-
+<section class="container-info">
+    <a href="#grafico" class="info">
+        <h1>35%</h1>
+        <p>Espécies afetadas pela poluição</p>
+    </a>
+    <a href="#grafico" class="info">
+        <h1>21%</h1>
+        <p>Animais impactados pela pesca</p>
+    </a>
+    <a href="#grafico" class="info">
+        <h1>18%</h1>
+        <p>Espécies ameaçadas nos oceanos</p>
+    </a>
+    <a href="#grafico" class="info">
+        <h1>12%</h1>
+        <p>Espécies em risco crítico</p>
+    </a>
+</section>
+<section class="animal-principal">
+    <img src="imagens/aquaticos/tartarura-na-rede.webp" alt="Tartaruga Marinha">
+    <div class="texto-animal">
+        <h2>Tartaruga-Marinha</h2>
+        <p>
+            As tartarugas marinhas existem há milhões de anos e desempenham
+            um papel importante nos ecossistemas costeiros. Atualmente,
+            enfrentam ameaças como resíduos plásticos, pesca acidental e
+            destruição das áreas de reprodução.
+        </p>
+        <ul>
+            <li><strong>Habitat:</strong> Oceanos Tropicais</li>
+            <li><strong>Classe:</strong> Réptil</li>
+            <li><strong>Status:</strong> Em Perigo</li>
+        </ul>
     </div>
-
-    <div class="rodape-bottom">
-        <p>&copy; 2026 Preserve Brasil. Todos os direitos reservados para a nossa fauna.</p>
+</section>
+<div class="container-botao">
+    <a href="#tabela" class="btn-animais">
+        Ver mais animais
+    </a>
+</div>
+<section class="estatisticas" id="grafico">
+    <h2>Principais Ameaças nos Oceanos e Rios</h2>
+    <p class="subtitulo-grafico">Os maiores perigos para a vida debaixo d'água.</p>
+    <div class="grafico">
+        <div class="barra-item">
+            <span>Poluição por Lixo Plástico (40%)</span>
+            <div class="barra"><div class="preenchimento plastico"></div></div>
+        </div>
+        <div class="barra-item">
+            <span>Vazamento de Óleo e Esgoto (25%)</span>
+            <div class="barra"><div class="preenchimento oleo"></div></div>
+        </div>
+        <div class="barra-item">
+            <span>Pesca Fantasma (Redes Abandonadas) (20%)</span>
+            <div class="barra"><div class="preenchimento pesca-fantasma"></div></div>
+        </div>
+        <div class="barra-item">
+            <span>Aquecimento das Águas (15%)</span>
+            <div class="barra"><div class="preenchimento aquecimento"></div></div>
+        </div>
     </div>
-</footer>
+</section>
+<section class="tabela-animais" id="tabela">
+    <h2>Animais Aquáticos Ameaçados</h2>
+    <div class="container-tabela">
+        <table>
+            <tr>
+                <th>Foto</th>
+                <th>Animal</th>
+                <th>Habitat</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td><img src="imagens/tartaruga-marinha.jpg"></td>
+                <td>Tartaruga-Marinha</td>
+                <td>Oceanos</td>
+                <td class="critico">Em Perigo</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/boto-cor-de-rosa.jpg"></td>
+                <td>Boto-Cor-de-Rosa</td>
+                <td>Rios Amazônicos</td>
+                <td class="perigo">Vulnerável</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/peixe-boi.jpg"></td>
+                <td>Peixe-Boi-da-Amazônia</td>
+                <td>Amazônia</td>
+                <td class="critico">Em Perigo</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/tubarao-martelo.jpg"></td>
+                <td>Tubarão-Martelo</td>
+                <td>Oceanos Tropicais</td>
+                <td class="critico">Criticamente Ameaçado</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/raia-viola.jpg"></td>
+                <td>Raia-Viola</td>
+                <td>Litoral Brasileiro</td>
+                <td class="perigo">Vulnerável</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/mero.jpg"></td>
+                <td>Mero</td>
+                <td>Recifes</td>
+                <td class="perigo">Vulnerável</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/toninha.jpg"></td>
+                <td>Toninha</td>
+                <td>Litoral Sul</td>
+                <td class="critico">Em Perigo</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/cavalo-marinho.jpg"></td>
+                <td>Cavalo-Marinho</td>
+                <td>Costões e Manguezais</td>
+                <td class="alerta">Monitoramento</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/baleia-franca.jpg"></td>
+                <td>Baleia-Franca</td>
+                <td>Atlântico Sul</td>
+                <td class="alerta">Recuperação</td>
+            </tr>
+            <tr>
+                <td><img src="imagens/pinguim-magalhaes.jpg"></td>
+                <td>Pinguim-de-Magalhães</td>
+                <td>Atlântico Sul</td>
+                <td class="alerta">Monitoramento</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
 </body>
 </html>

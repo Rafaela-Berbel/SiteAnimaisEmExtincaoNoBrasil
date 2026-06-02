@@ -2,56 +2,193 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Página Animais Terrestres</title>
-    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais Terrestres</title>
+    <link rel="stylesheet" href="style/animais.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="animais.html">Animais</a></li>
-                    <li><a href="causas.html">Causas</a></li>
-                    <li><a href="consequencias.html">Consequências</a></li>
-                    <li><a href="comoAjudar.html">Como Ajudar</a></li>
-                </ul>   
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="animais.html">Animais</a></li>
+            <li><a href="causas.html">Causas</a></li>
+            <li><a href="consequencias.html">Consequências</a></li>
+            <li><a href="comoAjudar.html">Como Ajudar</a></li>
+        </ul>
+    </nav>
+</header>
 
-      <footer class="rodape-site">
-    <div class="rodape-container">
-        
-        <div class="rodape-col">
-            <h3 class="rodape-titulo">Preserve Brasil</h3>
-            <p class="rodape-texto">
-                Um projeto dedicado a conscientizar e agir contra a extinção em massa da fauna brasileira. Cada voz conta para manter nossa biodiversidade viva.
-            </p>
-        </div>
+<section class="hero-animal hero-terrestre">
 
-        <div class="rodape-col">
-            <h4 class="rodape-subtitulo">Navegação</h4>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="animais.html">Animais</a></li>
-                <li><a href="causas.html">Causas</a></li>
-                <li><a href="consequencias.html">Consequências</a></li>
-                <li><a href="comoAjudar.html">Como Ajudar</a></li>
-            </ul>
-        </div>
-        <div class="rodape-col">
-    <h4 class="rodape-subtitulo">Preservar é Viver</h4>
-    <p class="rodape-texto">
-        A destruição dos habitats e as queimadas estão silenciando as nossas florestas. 
-        Proteger a fauna brasileira não é apenas salvar os animais, é garantir o equilíbrio 
-        do nosso próprio futuro. A mudança começa na conscientização.
-    </p>
+    <div class="conteudo-animais">
+
+        <h1>Animais Terrestres</h1>
+
+        <p>
+            Os animais terrestres são fundamentais para o equilíbrio dos
+            ecossistemas brasileiros. No entanto, o desmatamento, as
+            queimadas, a caça ilegal e a expansão urbana colocam diversas
+            espécies em risco de extinção.
+        </p>
+
+    </div>
+
+</section>
+<div class="botoes-navegacao">
+    <a href="animais-aquaticos.html" class="btn-nav">Ver Animais Aquáticos</a>
+    <a href="animais-aereos.html" class="btn-nav">Ver Animais Aéreos</a>
+</div>
+<section class="container-info">
+
+    <a href="#grafico" class="info">
+        <h1>24,1%</h1>
+        <p>Mata Atlântica</p>
+    </a>
+
+    <a href="#grafico" class="info">
+        <h1>13,7%</h1>
+        <p>Pampa</p>
+    </a>
+
+    <a href="#grafico" class="info">
+        <h1>13,3%</h1>
+        <p>Mamíferos</p>
+    </a>
+
+    <a href="#grafico" class="info">
+        <h1>4,3%</h1>
+        <p>Répteis</p>
+    </a>
+</section>
+<section class="animal-principal">
+
+    <img src="imagens/onça-presa.avif" alt="Onça Pintada">
+
+    <div class="texto-animal">
+
+        <h2>Onça-Pintada</h2>
+
+        <p>
+            A onça-pintada é o maior felino das Américas e um dos maiores
+            símbolos da fauna brasileira. A perda de habitat e os conflitos
+            com atividades humanas são as principais ameaças à espécie.
+        </p>
+
+        <ul>
+            <li><strong>Habitat:</strong> Pantanal, Amazônia e Cerrado</li>
+            <li><strong>Classe:</strong> Mamífero</li>
+            <li><strong>Status:</strong> Vulnerável</li>
+        </ul>
+
+    </div>
+</section>
+<div class="container-botao">
+
+    <a href="#tabela" class="btn-animais">
+        Ver mais animais
+    </a>
+
 </div>
 
-    </div>
+<section class="estatisticas" id="grafico">
+    <h2>Principais Ameaças aos Terrestres</h2>
+    <p class="subtitulo-grafico">O que está levando nossas espécies à extinção?</p>
 
-    <div class="rodape-bottom">
-        <p>&copy; 2026 Preserve Brasil. Todos os direitos reservados para a nossa fauna.</p>
+    <div class="grafico">
+        <div class="barra-item">
+            <span>Desmatamento e Perda de Habitat (45%)</span>
+            <div class="barra"><div class="preenchimento desmatamento"></div></div>
+        </div>
+
+        <div class="barra-item">
+            <span>Caça e Tráfico Ilegal (25%)</span>
+            <div class="barra"><div class="preenchimento caca"></div></div>
+        </div>
+
+        <div class="barra-item">
+            <span>Atropelamentos em Rodovias (15%)</span>
+            <div class="barra"><div class="preenchimento atropelamento"></div></div>
+        </div>
+
+        <div class="barra-item">
+            <span>Expansão Urbana e Agrícola (15%)</span>
+            <div class="barra"><div class="preenchimento expansao"></div></div>
+        </div>
     </div>
+</section>
+
+<section class="tabela-animais" id="tabela">
+
+<h2>Animais Terrestres Ameaçados</h2>
+
+<div class="container-tabela">
+
+<table>
+
+<tr>
+<th>Foto</th>
+<th>Animal</th>
+<th>Bioma</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td><img src="imagens/onca-pintada.jpg"></td>
+<td>Onça-Pintada</td>
+<td>Pantanal</td>
+<td class="perigo">Vulnerável</td>
+</tr>
+
+<tr>
+<td><img src="imagens/lobo-guara.jpg"></td>
+<td>Lobo-Guará</td>
+<td>Cerrado</td>
+<td class="alerta">Quase Ameaçado</td>
+</tr>
+
+<tr>
+<td><img src="imagens/mico-leao-dourado.jpg"></td>
+<td>Mico-Leão-Dourado</td>
+<td>Mata Atlântica</td>
+<td class="critico">Em Perigo</td>
+</tr>
+
+<tr>
+<td><img src="imagens/tatu-bola.jpg"></td>
+<td>Tatu-Bola</td>
+<td>Caatinga</td>
+<td class="perigo">Vulnerável</td>
+</tr>
+
+<tr>
+<td><img src="imagens/anta.jpg"></td>
+<td>Anta</td>
+<td>Amazônia</td>
+<td class="perigo">Vulnerável</td>
+</tr>
+
+<tr>
+<td><img src="imagens/tamandua-bandeira.jpg"></td>
+<td>Tamanduá-Bandeira</td>
+<td>Cerrado</td>
+<td class="perigo">Vulnerável</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<footer class="rodape">
+
+    <p>
+        Preservar os animais terrestres significa proteger os ecossistemas,
+        garantir a biodiversidade e construir um futuro mais sustentável.
+    </p>
+
 </footer>
 </body>
 </html>

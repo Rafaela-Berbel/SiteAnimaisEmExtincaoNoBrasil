@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Página Animais</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -22,10 +23,53 @@
                 </ul>   
         </nav>
     </header>
-    <h1><span class="cursiva">Animais</span> Ameaçados</h1>
+    <section class="inicio-animais">
+    <div class="conteudo-animais">
+        <h1>
+            Animais
+            <br>
+            Ameaçados
+        </h1>
+        <p>
+            Conheça espécies terrestres, aquáticas e aéreas
+            afetadas pelas mudanças ambientais
+            e pela ação humana.
+        </p>
+        <a href="#card-animais" class="botao-animais">
+            Ver animais 
+        </a>
+    </div>
+</section>
+<section class="container-info">
+    <div class="info">
+        <h1>6º</h1>
+        <p>Brasil entre os países com mais espécies ameaçadas</p>
+    </div>
+
+    <div class="info">
+        <h1>50%</h1>
+        <p>Fauna aquática em risco</p>
+    </div>
+    <div class="info">
+        <h1>21%</h1>
+        <p>Espécies aéreas ameaçadas</p>
+    </div>
+    <div class="info">
+        <h1>34%</h1>
+        <p>Animais terrestres ameaçados</p>
+    </div>
+</section>
+<section class="introducao-cards">
+    <h2>Explore os diferentes habitats</h2>
+    <p> A fauna ameaçada está presente em diversos ecossistemas do planeta.
+        Conheça espécies terrestres, aquáticas e aéreas que enfrentam riscos
+        devido à destruição ambiental, mudanças climáticas e ações humanas.
+    </p>
+</section>
+<section class="card-animais" id="card-animais"> 
     <section class="terrestres">
         <div class="imagem-animais">
-            <a href="animais-terrestres.html"><img src="./imagens/onça-pintada.jpg" alt="Onça-Pintada"></a>
+            <a href="animais-terrestres.html"><img src="./imagens/animais/onça-pintada.jpg" alt="Onça-Pintada"></a>
         </div>
         <div class="tipo-de-animal">
             <h3>Terrestres</h3>
@@ -33,7 +77,7 @@
     </section>
     <section class="aquaticos">
         <div class="imagem-animais">
-            <a href="animais-aquaticos.html"><img src="./imagens/tartaruga-marinha-animais.jpg" alt="Tartarura-Marinha"></a>
+            <a href="animais-aquaticos.html"><img src="./imagens/animais/tartaruga-marinha-animais.jpg" alt="Tartarura-Marinha"></a>
         </div>
         <div class="tipo-de-animal">
             <h3>Aquáticos</h3>
@@ -41,13 +85,12 @@
     </section>
     <section class="aereos">
         <div class="imagem-animais">
-            <a href="animais-aereos.html"><img src="./imagens/araras-azul.jpg" alt="Araras Azul"></a>
+            <a href="animais-aereos.html"><img src="./imagens/animais/araras-azul.jpg" alt="Araras Azul"></a>
         </div>
         <div class="tipo-de-animal">
             <h3>Aéreos</h3>
         </div>
     </section>
-
       <footer class="rodape-site">
     <div class="rodape-container">
         
@@ -83,6 +126,6 @@
         <p>&copy; 2026 Preserve Brasil. Todos os direitos reservados para a nossa fauna.</p>
     </div>
 </footer>
-    
+</section>
 </body>
 </html>
