@@ -307,15 +307,6 @@ nav ul li a:hover::after {
     color: #64748b;
     margin: 0;
 }
-
-/* PÁGINA INICIAL */
-.inicio {
-    padding-top: 180px;
-    padding-bottom: 30px;
-    position: relative;
-    color: var(--rosa-alerta);
-}
-
 .info {
     display: flex;
     flex-direction: column;
@@ -352,7 +343,7 @@ nav ul li a:hover::after {
     background-image: linear-gradient(rgba(1, 40, 31, 0.65), rgba(1, 40, 31, 0.8)), url(../imagens/amazonia.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efeito Parallax - A imagem fica fixa ao rolar */
+    /* Efeito Parallax - A imagem fica fixa ao rolar */
     min-height: 100vh;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
@@ -384,12 +375,11 @@ nav ul li a:hover::after {
     margin: 0 auto 20px;
     font-size: 18px; 
     max-width: 580px; 
-    color: #e9ecef; 
     margin: 0 auto;
     font-size: 1rem;
     max-width: 420px;
     margin-bottom: 25px;
-    color: var(--verde-escuro);
+    color: white;
     padding-left: 25px;
     line-height: 1.7;
     font-family: "Libre Baskerville", serif;
@@ -428,6 +418,7 @@ nav ul li a:hover::after {
     font-size: 0.875rem;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(3px);
+    animation: flutuar-botao 2s infinite ease-in-out; /* Chama a animação */
 }
 
 .inicio a:hover {
@@ -451,7 +442,7 @@ nav ul li a:hover::after {
     background: var(--caixa-destaque);
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
-    animation: flutuar-botao 2s infinite ease-in-out; /* Chama a animação */
+    
 }
 
 
@@ -553,29 +544,6 @@ h1 {
     font-family: "Times New Roman", Times, serif;
     color: var(--verde-medio);
 }
-
-.cursiva {
-    font-family: "Parisienne", cursive;
-    font-weight: normal;
-}
-
-.terrestres,
-.aquaticos,
-.aereos {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    width: 30%;
-    margin: 0 1.5%;
-    vertical-align: top;
-    transition: transform 0.3s ease;
-}
-
-.terrestres:hover,
-.aquaticos:hover,
-.aereos:hover {
-    transform: scale(1.03);
-}
 .imagem-animais img {
     position: relative;
     width: 100%;
@@ -586,9 +554,7 @@ h1 {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     border-radius: 24px;
 }
-/*
-   6. PÁGINA: ANIMAIS
- */
+
 .inicio-animais {
     background-image: linear-gradient(rgba(1, 40, 31, 0.7), rgba(1, 40, 31, 0.85)), url(../imagens/animais/lobo-guara.jpg);
     background-size: cover;
@@ -622,6 +588,7 @@ h1 {
 }
 
 .botao-animais {
+    display: inline-block;
     text-decoration: none;
     padding: 12px 35px;
     border: 2px solid var(--verde-claro);
@@ -632,12 +599,12 @@ h1 {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
+   animation: flutuar-botao 2s infinite ease-in-out; 
 }
 
 .botao-animais:hover {
     background-color: var(--verde-claro);
     color: var(--verde-escuro);
-    transform: scale(1.05);
 }
 
 /*
@@ -694,7 +661,7 @@ h1 {
 
 .introducao-cards p {
     font-family: "Libre Baskerville", serif;
-    color: #444;
+    color: black;
     font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
@@ -713,7 +680,7 @@ h1 {
 
 /* Estilo base para todos os cards */
 .terrestres, .aquaticos, .aereos {
-    background: #ffffff;
+    background: white;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
@@ -761,12 +728,11 @@ h1 {
 .aquaticos:hover .imagem-animais img, 
 .aereos:hover .imagem-animais img {
     transform: scale(1.1);
-    box-shadow: 0 0 0 6px var(--verde-claro);
 
 }
 
 .tipo-de-animal {
-    padding: 25px;
+    padding: px;
     text-align: center;
     background-color: #ffffff;
 }
@@ -778,10 +744,8 @@ h1 {
     margin: 0;
     letter-spacing: 1px;
     font-weight: 500;
-    color: rgb(255, 249, 242);
-    font-size: 1.375rem;
-    background: var(--verde-medio);
-    opacity: 0.6;
+    color: var(--verde-escuro);
+    font-weight: 600;
     backdrop-filter: blur(0.2px);
     display: block;
     width: 100%;
