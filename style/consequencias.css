@@ -1,0 +1,150 @@
+/* PÁGINA CONSEQUÊNCIAS */
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.inicio-consequencia {
+    padding-top: 180px;
+    padding-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: flex-start;
+    color: var(--verde-escuro);
+    font-family: "Merriweather", serif;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+        url(../imagens/anta-consequencia.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+}
+
+.container-consequencias {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 120px auto;
+}
+
+.card-consequencias {
+    width: 380px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: "Inter", sans-serif;
+    border: 1px solid #e0e7e1;
+}
+
+@supports (animation-timeline: view()) {
+    .card-consequencias {
+        animation: aparecer linear both;
+        animation-timeline: view();
+    }
+
+    .card-consequencias:nth-child(3n + 1) {
+        animation-range: entry 0% cover 20%;
+    }
+
+    .card-consequencias:nth-child(3n + 2) {
+        animation-range: entry 5% cover 25%;
+    }
+
+    .card-consequencias:nth-child(3n + 3) {
+        animation-range: entry 10% cover 30%;
+    }
+}
+
+.card-header {
+    height: 250px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.card-consequencias:nth-child(1) .card-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imagens/ninho-vazio.jpg);
+}
+
+.card-consequencias:nth-child(2) .card-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imagens/joaninha-comendo.webp);
+}
+
+.card-consequencias:nth-child(3) .card-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imagens/flor.jpg);
+}
+
+.card-consequencias:nth-child(4) .card-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imagens/onca-urbana.jpg);
+}
+
+.card-consequencias:nth-child(5) .card-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imagens/borboleta.jpg);
+}
+
+.card-consequencias:nth-child(6) .card-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imagens/floresta-por-sol.jpg);
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.icon-box img {
+    width: 45px;
+    height: 45px;
+    filter: brightness(0) invert(1);
+}
+
+.header-text {
+    text-align: left;
+}
+
+.percentage {
+    font-size: 2.625rem;
+    font-weight: 800;
+    display: block;
+}
+
+.subtext {
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.card-body {
+    padding: 30px 25px;
+    text-align: left;
+}
+
+.card-body h3 {
+    color: #01281f;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #555;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}

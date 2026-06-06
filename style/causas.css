@@ -1,0 +1,129 @@
+/* PÁGINA CAUSAS */
+.tudo-causas {
+    margin-bottom: 120px;
+}
+
+.inicio-causas {
+    padding-top: 180px;
+    padding-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: flex-start;
+    color: var(--verde-escuro);
+    font-family: "Merriweather", serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../imagens/veado-em-chamas.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+}
+
+.conteudo-causas h1 {
+    margin-left: 120px;
+    margin-top: 0;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1.2;
+    color: white;
+}
+
+.conteudo-causas p {
+    position: relative;
+    margin-left: 100px;
+    max-width: none;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.causas {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+}
+
+.causas h2 {
+    margin-top: 4rem;
+    font-size: 1.25rem;
+    font-family: "Merriweather", serif;
+}
+
+.causas p {
+    margin-bottom: 60px;
+}
+
+.pagina-causas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 30px auto;
+    max-width: 1000px;
+    font-family: "Merriweather", serif;
+    background-color: var(--caixa-destaque);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.pagina-causas p {
+    max-width: 500px;
+    color: var(--verde-escuro);
+    font-family: "Libre Baskerville", serif;
+}
+
+.conteudo-principais {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.pagina-causas-img {
+    overflow: hidden;
+    height: 350px;
+    border-radius: 30px;
+}
+
+.pagina-causas-img img {
+    height: 350px;
+    border-radius: 30px;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.pagina-causas-img img:hover {
+    transform: scale(1.1);
+}
+
+.imagem-mini {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.imagem-mini p {
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.25rem;
+    color: rgb(255, 0, 102);
+    margin: 0;
+    background-color: rgba(255, 0, 102, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.imagem-mini img {
+    height: 80px;
+    width: auto;
+    background-color: rgba(183, 228, 199, 0.4);
+    border-radius: 10px;
+}

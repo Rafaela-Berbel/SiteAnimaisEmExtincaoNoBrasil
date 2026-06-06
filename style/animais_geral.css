@@ -1,0 +1,285 @@
+.pagina-animais {
+    min-height: 100vh;
+    background: var(--fundo-claro);
+    padding-bottom: 60px;
+}
+
+.inicio-animais {
+    background-image: linear-gradient(rgba(1, 40, 31, 0.65), rgba(1, 40, 31, 0.85)), url(../imagens/animais/lobo-guara.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 100px;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+@keyframes entrada-hero {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.conteudo-animais {
+    max-width: 650px;
+    text-align: left;
+    animation: entrada-hero 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.conteudo-animais h1 {
+    color: #ffffff;
+    font-family: "Merriweather", serif;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.4);
+    margin-top: 0; 
+}
+
+.conteudo-animais p {
+    color: #e9ecef;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.conteudo-animais p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 4px;
+    height: 90%;
+    background-color: var(--verde-claro);
+    border-radius: 2px;
+}
+
+@keyframes pulsar-botao-animais {
+    0% {
+        box-shadow: 0 4px 15px rgba(183, 228, 199, 0.2), 0 0 0 0 rgba(183, 228, 199, 0.4);
+    }
+    70% {
+        box-shadow: 0 4px 20px rgba(183, 228, 199, 0.2), 0 0 0 10px rgba(183, 228, 199, 0);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(183, 228, 199, 0.2), 0 0 0 0 rgba(183, 228, 199, 0);
+    }
+}
+
+.botao-animais {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 36px;
+    border: 2px solid var(--verde-claro);
+    border-radius: 30px;
+    color: var(--verde-claro);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
+    animation: pulsar-botao-animais 2.5s infinite ease-in-out;
+}
+
+.botao-animais::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--verde-claro);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: -1;
+}
+
+.botao-animais:hover {
+    color: var(--verde-escuro);
+    transform: translateY(-4px) scale(1.03);
+    animation-play-state: paused;
+}
+
+.botao-animais:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.botao-animais:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.container-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 80px 20px;
+    background-color: var(--fundo-claro);
+}
+
+.info {
+    text-decoration: none;
+    width: 260px;
+    text-align: center;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(1, 40, 31, 0.05);
+    border: 1px solid rgba(1, 40, 31, 0.03);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(1, 40, 31, 0.12);
+}
+
+.info h1 {
+    font-size: 2.8rem;
+    font-family: "Merriweather", serif;
+    color: var(--rosa-alerta);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.info p {
+    color: var(--verde-escuro);
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 500;
+}
+
+.introducao-cards {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background-color: var(--fundo-claro);
+}
+
+.introducao-cards h2 {
+    font-family: "Merriweather", serif;
+    color: var(--verde-escuro);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.introducao-cards p {
+    font-family: "Libre Baskerville", serif;
+    color: #4a5568;
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.card-animais {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 40px 100px;
+    background-color: var(--fundo-claro);
+    flex-wrap: wrap; 
+}
+
+.terrestres, .aquaticos, .aereos {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(1, 40, 31, 0.05);
+    width: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    position: relative;
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.25s ease, 
+                background 0.25s ease;
+    cursor: pointer;
+}
+
+.terrestres:hover, .aquaticos:hover, .aereos:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(1, 40, 31, 0.15);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.imagem-animais {
+    width: 100%;
+    height: 280px;
+    overflow: hidden; 
+    position: relative;
+}
+
+.imagem-animais img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.terrestres:hover .imagem-animais img, 
+.aquaticos:hover .imagem-animais img, 
+.aereos:hover .imagem-animais img {
+    transform: scale(1.08);
+}
+
+.tipo-de-animal {
+    padding: 30px 25px;
+    text-align: center;
+    position: relative;
+}
+
+.tipo-de-animal h3 {
+    font-family: "Merriweather", serif;
+    color: var(--verde-escuro);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.3px;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.terrestres:hover .tipo-de-animal h3,
+.aquaticos:hover .tipo-de-animal h3,
+.aereos:hover .tipo-de-animal h3 {
+    color: var(--verde-medio);
+    transform: translateY(-2px);
+}
+
+.tipo-de-animal a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tipo-de-animal a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    border-radius: 35px;
+}
