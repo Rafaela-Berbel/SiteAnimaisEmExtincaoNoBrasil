@@ -3,88 +3,68 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Página Causas</title>
+        <title>Consequências — Preserve Brasil</title>
         <link rel="stylesheet" href="style/style.css" />
         <link rel="stylesheet" href="./style/consequencias.css" />
         <link rel="stylesheet" href="./style/responsivo.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Special+Elite&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <span class="p-loader"
-            ><img src="./imagens/intro-tartaruga.png" alt=""
-        /></span>
+        <span class="p-loader">
+            <img src="./imagens/intro-tartaruga.png" alt="Carregando..." />
+        </span>
+
         <header>
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="animais.html">Animais</a></li>
                     <li><a href="causas.html">Causas</a></li>
-                    <li>
-                        <a href="consequencias.html" class="destaque"
-                            >Consequências</a
-                        >
-                    </li>
+                    <li><a href="consequencias.html" class="destaque">Consequências</a></li>
                     <li><a href="comoAjudar.html">Como Ajudar</a></li>
                 </ul>
             </nav>
         </header>
-        <section class="inicio inicio-consequencia">
-            <div class="conteudo-causas">
-                <h1>O Custo Real da Extinção:</h1>
+
+        <main class="tudo-consequencias">
+            <section class="inicio-consequencia">
+                <div class="conteudo-consequencias">
+                    <h1>O Custo Real da Extinção</h1>
+                    <p>
+                        Quando perdemos uma espécie, não perdemos apenas um animal.
+                        Perdemos equilíbrio, saúde ambiental e o futuro do nosso
+                        próprio planeta. Conheça as consequências irreversíveis da
+                        extinção no Brasil.
+                    </p>
+                </div>
+            </section>
+
+            <section class="container-info">
+                <div class="info">
+                    <span class="numero-destaque">+1.100</span>
+                    <p>Espécies nativas atualmente ameaçadas de extinção em território brasileiro.</p>
+                </div>
+                <div class="info">
+                    <span class="numero-destaque">456</span>
+                    <p>Espécies de nossa fauna em estado crítico e risco iminente de desaparecer.</p>
+                </div>
+            </section>
+
+            <section class="introducao-cards">
+                <h2>Consequências Irreversíveis</h2>
                 <p>
-                    Quando perdemos uma espécie, não perdemos apenas um animal.
-                    Perdemos equilíbrio, saúde ambiental e o futuro do nosso
-                    próprio planeta. Conheça as consequências irreversíveis da
-                    extinção no Brasil.
+                    A extinção de animais no Brasil não é apenas uma perda ambiental — é uma ameaça 
+                    direta à nossa sobrevivência, economia e qualidade de vida. Cada espécie que desaparece 
+                    desencadeia uma reação em cadeia com impactos profundos e duradouros.
                 </p>
-            </div>
-        </section>
+            </section>
 
-        <section class="container-info">
-            <div class="info info-consequencia">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-trending-down w-5 h-5"
-                >
-                    <polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline>
-                    <polyline points="16 17 22 17 22 11"></polyline>
-                </svg>
-                <h1>
-                    Mais de 1.100 espécies ameaçadas no Brasil • 456 espécies em
-                    risco crítico de extinção
-                </h1>
-            </div>
-        </section>
-
-        <section class="causas">
-            <h2>Consequencias Irreversíveis</h2>
-            <p>
-                A extinção de animais no Brasil não é apenas uma perda ambiental
-                — é uma ameaça direta à nossa sobrevivência, economia e
-                qualidade de vida. Cada espécie que desaparece desencadeia uma
-                reação em cadeia com impactos profundos e duradouros
-            </p>
-
-            <!-- card 1 -->
-            <div class="container-consequencias">
+            <section class="container-consequencias">
+              
                 <div class="card-consequencias">
                     <div class="card-header">
                         <div class="icon-box">
-                            <img
-                                src="/imagens/cadeia-alimentar-risco.png"
-                                alt=""
-                            />
+                            <img src="./imagens/cadeia-alimentar-risco.png" alt="Ícone de teia alimentar" />
                         </div>
                         <div class="header-text">
                             <span class="percentage">Caos</span>
@@ -102,10 +82,11 @@
                     </div>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="card-consequencias">
                     <div class="card-header">
                         <div class="icon-box">
-                            <img src="/imagens/risco-agricultura.png" alt="" />
+                            <img src="./imagens/risco-agricultura.png" alt="Ícone de agricultura" />
                         </div>
                         <div class="header-text">
                             <span class="percentage">Risco</span>
@@ -123,13 +104,11 @@
                     </div>
                 </div>
 
+                <!-- Card 3 -->
                 <div class="card-consequencias">
                     <div class="card-header">
                         <div class="icon-box">
-                            <img
-                                src="/imagens/agente-polinizador-risco.png"
-                                alt=""
-                            />
+                            <img src="./imagens/agente-polinizador-risco.png" alt="Ícone de polinização" />
                         </div>
                         <div class="header-text">
                             <span class="percentage">Queda</span>
@@ -147,10 +126,11 @@
                     </div>
                 </div>
 
+                <!-- Card 4 -->
                 <div class="card-consequencias">
                     <div class="card-header">
                         <div class="icon-box">
-                            <img src="/imagens/fugaurbana-risco.png" alt="" />
+                            <img src="./imagens/fugaurbana-risco.png" alt="Ícone de área urbana" />
                         </div>
                         <div class="header-text">
                             <span class="percentage">Fuga</span>
@@ -168,10 +148,11 @@
                     </div>
                 </div>
 
+                <!-- Card 5 -->
                 <div class="card-consequencias">
                     <div class="card-header">
                         <div class="icon-box">
-                            <img src="/imagens/efeitoborboleta-risco.png" alt="">
+                            <img src="./imagens/efeitoborboleta-risco.png" alt="Ícone do efeito borboleta" />
                         </div>
                         <div class="header-text">
                             <span class="percentage">Eco</span>
@@ -189,62 +170,64 @@
                     </div>
                 </div>
 
+                <!-- Card 6 -->
                 <div class="card-consequencias">
                     <div class="card-header">
                         <div class="icon-box">
-                            <img src="/imagens/risco-global.png" alt="">
+                            <img src="./imagens/risco-global.png" alt="Ícone global" />
                         </div>
                         <div class="header-text">
-                            <span class="percentage">> 20%</span>
+                            <span class="percentage">&gt; 20%</span>
                             <span class="subtext">da diversidade global</span>
                         </div>
                     </div>
                     <div class="card-body">
                         <h3>Ameaça ao Nosso Futuro</h3>
                         <p>
-                            O Brasil abriga um quinto das espécies do planeta. A
+                            O Brasil abriga um quarto das espécies do planeta. A
                             extinção não afeta apenas o futuro, mas já prejudica
                             diretamente a nossa economia, saúde e segurança
                             hoje.
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
+
         <footer class="rodape-site">
-    <div class="rodape-container">
-        
-        <div class="rodape-col">
-            <h3 class="rodape-titulo">Preserve Brasil</h3>
-            <p class="rodape-texto">
-                Um projeto dedicado a conscientizar e agir contra a extinção em massa da fauna brasileira. Cada voz conta para manter nossa biodiversidade viva.
-            </p>
-        </div>
+            <div class="rodape-container">
+                <div class="rodape-col">
+                    <h3 class="rodape-titulo">Preserve Brasil</h3>
+                    <p class="rodape-texto">
+                        Um projeto dedicado a conscientizar e agir contra a extinção em massa da fauna brasileira. Cada voz conta para manter nossa biodiversidade viva.
+                    </p>
+                </div>
 
-        <div class="rodape-col">
-            <h4 class="rodape-subtitulo">Navegação</h4>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="animais.html">Animais</a></li>
-                <li><a href="causas.html">Causas</a></li>
-                <li><a href="consequencias.html">Consequências</a></li>
-                <li><a href="comoAjudar.html">Como Ajudar</a></li>
-            </ul>
-        </div>
-        <div class="rodape-col">
-    <h4 class="rodape-subtitulo">Preservar é Viver</h4>
-    <p class="rodape-texto">
-        A destruição dos habitats e as queimadas estão silenciando as nossas florestas. 
-        Proteger a fauna brasileira não é apenas salvar os animais, é garantir o equilíbrio 
-        do nosso próprio futuro. A mudança começa na conscientização.
-    </p>
-</div>
+                <div class="rodape-col">
+                    <h4 class="rodape-subtitulo">Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="animais.html">Animais</a></li>
+                        <li><a href="causas.html">Causas</a></li>
+                        <li><a href="consequencias.html">Consequências</a></li>
+                        <li><a href="comoAjudar.html">Como Ajudar</a></li>
+                        <li><a href="referencias.html">Referências</a></li>
+                    </ul>
+                </div>
+                
+                <div class="rodape-col">
+                    <h4 class="rodape-subtitulo">Preservar é Viver</h4>
+                    <p class="rodape-texto">
+                        A destruição dos habitats e as queimadas estão silenciando as nossas florestas. 
+                        Proteger a fauna brasileira não é apenas salvar os animais, é garantir o equilíbrio 
+                        do nosso próprio futuro. A mudança começa na conscientização.
+                    </p>
+                </div>
+            </div>
 
-    </div>
-
-    <div class="rodape-bottom">
-        <p>&copy; 2026 Preserve Brasil. Todos os direitos reservados para a nossa fauna.</p>
-    </div>
-</footer>
+            <div class="rodape-bottom">
+                <p>&copy; 2026 Preserve Brasil. Todos os direitos reservados para a nossa fauna.</p>
+            </div>
+        </footer>
     </body>
 </html>

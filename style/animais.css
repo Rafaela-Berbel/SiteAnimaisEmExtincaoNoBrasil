@@ -17,6 +17,82 @@ html {
     scroll-behavior: smooth;
 }
 
+@keyframes descerCabecalho {
+    from { 
+        top: -100px; 
+        opacity: 0; 
+    }
+    to { 
+        top: 20px; 
+        opacity: 0.8; 
+    }
+}
+
+@keyframes subindoElemento {
+    from { 
+        opacity: 0; 
+        transform: translateY(40px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes deslizarLinhaTabela {
+    from { 
+        opacity: 0; 
+        transform: translateX(-30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes flutuar {
+    0%, 
+    100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-12px); 
+    }
+}
+
+@keyframes encherBarra {
+    from { 
+        width: 0; 
+        opacity: 0; 
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+@keyframes pulsar-botao-geral {
+    0% { 
+        box-shadow: 0 4px 15px rgba(1, 40, 31, 0.15), 0 0 0 0 rgba(27, 67, 50, 0.3); 
+    }
+    70% { 
+        box-shadow: 0 4px 20px rgba(1, 40, 31, 0.15), 0 0 0 10px rgba(27, 67, 50, 0); 
+    }
+    100% { 
+        box-shadow: 0 4px 15px rgba(1, 40, 31, 0.15), 0 0 0 0 rgba(27, 67, 50, 0); 
+    }
+}
+
 header {
     position: fixed;
     top: 20px;
@@ -31,6 +107,7 @@ header {
     opacity: 0.8;
     border-radius: 30px;
     transform: translate(-50%);
+    animation: descerCabecalho 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 nav ul {
@@ -68,12 +145,12 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.destaque {
-    font-weight: 500;
+.destaque { 
+    font-weight: 500; 
 }
 
-.destaque::after {
-    width: 100%;
+.destaque::after { 
+    width: 100%; 
 }
 
 .hero-animal {
@@ -84,23 +161,27 @@ nav ul li a:hover::after {
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.hero-terrestre {
-    background-image: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("../imagens/terrestres/tatu-bola.jpg");
+.hero-terrestre { 
+    background-image: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("../imagens/terrestres/tatu-bola.jpg"); 
 }
 
-.hero-aquatico {
-    background-image: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("../imagens/aquaticos/tartaruga-no-lixo.png");
+.hero-aquatico { 
+    background-image: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("../imagens/aquaticos/tartaruga-no-lixo.png"); 
 }
 
-.hero-aereo {
-    background-image: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("../imagens/aereos/aves-ameaçadas.jpg");
+.hero-aereo { 
+    background-image: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("../imagens/aereos/aves-ameaçadas.jpg"); 
 }
 
 .conteudo-animais {
     margin-left: 90px;
     max-width: 750px;
+    animation: subindoElemento 1s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
 }
 
 .conteudo-animais h1 {
@@ -137,10 +218,28 @@ nav ul li a:hover::after {
     box-shadow: 0 15px 35px rgba(1, 40, 31, 0.05);
     border: 1px solid rgba(1, 40, 31, 0.03);
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    opacity: 0;
+    animation: subindoElemento 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.info:nth-child(1) { 
+    animation-delay: 0.2s; 
+}
+
+.info:nth-child(2) { 
+    animation-delay: 0.4s; 
+}
+
+.info:nth-child(3) { 
+    animation-delay: 0.6s; 
+}
+
+.info:nth-child(4) { 
+    animation-delay: 0.8s; 
 }
 
 .info:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.03);
     box-shadow: 0 25px 50px rgba(1, 40, 31, 0.12);
 }
 
@@ -167,6 +266,7 @@ nav ul li a:hover::after {
     align-items: center;
     gap: 60px;
     padding: 60px 40px;
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animal-principal img {
@@ -175,10 +275,11 @@ nav ul li a:hover::after {
     object-fit: cover;
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(0,0,0,.15);
+    animation: flutuar 4s infinite ease-in-out;
 }
 
-.texto-animal {
-    flex: 1;
+.texto-animal { 
+    flex: 1; 
 }
 
 .texto-animal h2 {
@@ -195,8 +296,8 @@ nav ul li a:hover::after {
     color: #2c3531;
 }
 
-.texto-animal ul {
-    list-style: none;
+.texto-animal ul { 
+    list-style: none; 
 }
 
 .texto-animal li {
@@ -208,18 +309,11 @@ nav ul li a:hover::after {
     font-size: 0.95rem;
     color: var(--verde-escuro);
     border-left: 3px solid var(--verde-medio);
+    transition: transform 0.3s ease;
 }
 
-@keyframes pulsar-botao-geral {
-    0% {
-        box-shadow: 0 4px 15px rgba(1, 40, 31, 0.15), 0 0 0 0 rgba(27, 67, 50, 0.3);
-    }
-    70% {
-        box-shadow: 0 4px 20px rgba(1, 40, 31, 0.15), 0 0 0 10px rgba(27, 67, 50, 0);
-    }
-    100% {
-        box-shadow: 0 4px 15px rgba(1, 40, 31, 0.15), 0 0 0 0 rgba(27, 67, 50, 0);
-    }
+.texto-animal li:hover {
+    transform: translateX(10px);
 }
 
 .container-botao {
@@ -246,7 +340,8 @@ nav ul li a:hover::after {
     animation: pulsar-botao-geral 2.5s infinite ease-in-out;
 }
 
-.btn-animais::before {
+.btn-animais::before, 
+.btn-nav::before {
     content: "";
     position: absolute;
     top: 0;
@@ -260,13 +355,15 @@ nav ul li a:hover::after {
     z-index: -1;
 }
 
-.btn-animais:hover {
+.btn-animais:hover, 
+.btn-nav:hover {
     color: white;
     transform: translateY(-4px) scale(1.02);
     animation-play-state: paused;
 }
 
-.btn-animais:hover::before {
+.btn-animais:hover::before, 
+.btn-nav:hover::before {
     transform: scaleX(1);
     transform-origin: left;
 }
@@ -298,38 +395,19 @@ nav ul li a:hover::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.btn-nav::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--verde-medio);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-    z-index: -1;
+.btn-nav:hover { 
+    box-shadow: 0 8px 20px rgba(27, 67, 50, 0.15); 
 }
 
-.btn-nav:hover {
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(27, 67, 50, 0.15);
-}
-
-.btn-nav:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.btn-nav:active, .btn-animais:active {
-    transform: translateY(-1px) scale(0.98);
+.btn-nav:active, 
+.btn-animais:active { 
+    transform: translateY(-1px) scale(0.98); 
 }
 
 .estatisticas {
     padding: 120px 40px;
     background: var(--verde-escuro);
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .estatisticas h2 {
@@ -353,8 +431,8 @@ nav ul li a:hover::after {
     margin: auto;
 }
 
-.barra-item {
-    margin-bottom: 35px;
+.barra-item { 
+    margin-bottom: 35px; 
 }
 
 .barra-item span {
@@ -363,6 +441,8 @@ nav ul li a:hover::after {
     margin-bottom: 12px;
     font-size: 18px;
     font-family: "Inter", sans-serif;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
 }
 
 .barra {
@@ -376,36 +456,174 @@ nav ul li a:hover::after {
 .preenchimento {
     height: 100%;
     border-radius: 30px;
+    width: 0;
+    animation: encherBarra 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.mata { width: 24.1%; background: #52b788; }
-.pampa { width: 13.7%; background: #74c69d; }
-.mamiferos { width: 13.3%; background: #95d5b2; }
-.repteis { width: 4.3%; background: #d8f3dc; }
-.poluicao { width: 35%; background: #1b6ca8; }
-.pesca { width: 21%; background: #2a9df4; }
-.ameacadas { width: 18%; background: #58b4ff; }
-.critico-mar { width: 12%; background: #9ad1ff; }
-.habitat { width: 20%; background: #52b788; }
-.trafico { width: 15%; background: #74c69d; }
-.aves { width: 11%; background: #95d5b2; }
-.risco { width: 8%; background: #d8f3dc; }
-.desmatamento { width: 45%; background: #e63946; }
-.caca { width: 25%; background: #f4a261; }
-.atropelamento { width: 15%; background: #e9c46a; }
-.expansao { width: 15%; background: #2a9d8f; }
-.plastico { width: 40%; background: #0077b6; }
-.oleo { width: 25%; background: #023e8a; }
-.pesca-fantasma { width: 20%; background: #00b4d8; }
-.aquecimento { width: 15%; background: #90e0ef; }
-.perda-ninho { width: 40%; background: #2d6a4f; }
-.trafico-aves { width: 30%; background: #40916c; }
-.colisao { width: 20%; background: #52b788; }
-.agrotoxico { width: 10%; background: #74c69d; }
+.barra-item:nth-child(1) span { 
+    animation-delay: 0.2s; 
+}
+
+.barra-item:nth-child(1) .preenchimento { 
+    animation-delay: 0.2s; 
+}
+
+.barra-item:nth-child(2) span { 
+    animation-delay: 0.5s; 
+}
+
+.barra-item:nth-child(2) .preenchimento { 
+    animation-delay: 0.5s; 
+}
+
+.barra-item:nth-child(3) span { 
+    animation-delay: 0.8s; 
+}
+
+.barra-item:nth-child(3) .preenchimento { 
+    animation-delay: 0.8s; 
+}
+
+.barra-item:nth-child(4) span { 
+    animation-delay: 1.1s; 
+}
+
+.barra-item:nth-child(4) .preenchimento { 
+    animation-delay: 1.1s; 
+}
+
+.barra-item:nth-child(5) span { 
+    animation-delay: 1.4s; 
+}
+
+.barra-item:nth-child(5) .preenchimento { 
+    animation-delay: 1.4s; 
+}
+
+.mata { 
+    width: 24.1%; 
+    background: #52b788; 
+}
+
+.pampa { 
+    width: 13.7%; 
+    background: #74c69d; 
+}
+
+.mamiferos { 
+    width: 13.3%; 
+    background: #95d5b2; 
+}
+
+.repteis { 
+    width: 4.3%; 
+    background: #d8f3dc; 
+}
+
+.poluicao { 
+    width: 35%; 
+    background: #1b6ca8; 
+}
+
+.pesca { 
+    width: 21%; 
+    background: #2a9df4; 
+}
+
+.ameacadas { 
+    width: 18%; 
+    background: #58b4ff; 
+}
+
+.critico-mar { 
+    width: 12%; 
+    background: #9ad1ff; 
+}
+
+.habitat { 
+    width: 20%; 
+    background: #52b788; 
+}
+
+.trafico { 
+    width: 15%; 
+    background: #74c69d; 
+}
+
+.aves { 
+    width: 11%; 
+    background: #95d5b2; 
+}
+
+.risco { 
+    width: 8%; 
+    background: #d8f3dc; 
+}
+
+.desmatamento { 
+    width: 45%; 
+    background: #e63946; 
+}
+
+.caca { 
+    width: 25%; 
+    background: #f4a261; 
+}
+
+.atropelamento { 
+    width: 15%; 
+    background: #e9c46a; 
+}
+
+.expansao { 
+    width: 15%; 
+    background: #2a9d8f; 
+}
+
+.plastico { 
+    width: 40%; 
+    background: #0077b6; 
+}
+
+.oleo { 
+    width: 25%; 
+    background: #023e8a; 
+}
+
+.pesca-fantasma { 
+    width: 20%; 
+    background: #00b4d8; 
+}
+
+.aquecimento { 
+    width: 15%; 
+    background: #90e0ef; 
+}
+
+.perda-ninho { 
+    width: 40%; 
+    background: #2d6a4f; 
+}
+
+.trafico-aves { 
+    width: 30%; 
+    background: #40916c; 
+}
+
+.colisao { 
+    width: 20%; 
+    background: #52b788; 
+}
+
+.agrotoxico { 
+    width: 10%; 
+    background: #74c69d; 
+}
 
 .tabela-animais {
     padding: 120px 40px;
     background-color: var(--fundo-claro);
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .tabela-animais h2 {
@@ -448,11 +666,57 @@ td {
 }
 
 tr {
-    transition: background-color 0.25s ease;
+    opacity: 0;
+    animation: deslizarLinhaTabela 0.6s ease-out forwards;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+tbody tr:nth-child(1) { 
+    animation-delay: 0.1s; 
+}
+
+tbody tr:nth-child(2) { 
+    animation-delay: 0.2s; 
+}
+
+tbody tr:nth-child(3) { 
+    animation-delay: 0.3s; 
+}
+
+tbody tr:nth-child(4) { 
+    animation-delay: 0.4s; 
+}
+
+tbody tr:nth-child(5) { 
+    animation-delay: 0.5s; 
+}
+
+tbody tr:nth-child(6) { 
+    animation-delay: 0.6s; 
+}
+
+tbody tr:nth-child(7) { 
+    animation-delay: 0.7s; 
+}
+
+tbody tr:nth-child(8) { 
+    animation-delay: 0.8s; 
+}
+
+tbody tr:nth-child(9) { 
+    animation-delay: 0.9s; 
+}
+
+tbody tr:nth-child(10) { 
+    animation-delay: 1.0s; 
 }
 
 tr:hover {
     background: rgba(183, 228, 199, 0.15);
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 2;
 }
 
 td img {
@@ -461,45 +725,24 @@ td img {
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--verde-claro);
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 tr:hover td img {
-    transform: scale(1.08);
+    transform: scale(1.15) rotate(5deg);
 }
 
-.perigo { color: #d97706; font-weight: 700; }
-.alerta { color: #e11d48; font-weight: 700; }
-.critico { color: #b91c1c; font-weight: 700; }
-
-@keyframes fadeIn {
-    from { 
-        opacity: 0; 
-        transform: translateY(20px); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
+.perigo { 
+    color: #d97706; 
+    font-weight: 700; 
 }
 
-.hero-animal, .container-info, .animal-principal, .estatisticas, .tabela-animais {
-    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+.alerta { 
+    color: #e11d48; 
+    font-weight: 700; 
 }
 
-@keyframes flutuar {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
-}
-
-.animal-principal img {
-    animation: flutuar 4s infinite ease-in-out;
-}
-
-@keyframes encherBarra {
-    from { width: 0; }
-}
-
-.preenchimento {
-    animation: encherBarra 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+.critico { 
+    color: #b91c1c; 
+    font-weight: 700; 
 }

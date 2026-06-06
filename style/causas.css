@@ -1,44 +1,109 @@
-/* PÁGINA CAUSAS */
 .tudo-causas {
     margin-bottom: 120px;
 }
 
+/* BANNER INICIAL - Padrão Editorial Identificado com Animais */
 .inicio-causas {
-    padding-top: 180px;
-    padding-bottom: 30px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 30px;
-    align-items: flex-start;
-    color: var(--verde-escuro);
-    font-family: "Merriweather", serif;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../imagens/veado-em-chamas.jpg);
+    background-image: linear-gradient(rgba(1, 40, 31, 0.65), rgba(1, 40, 31, 0.85)), url(../imagens/veado-em-chamas.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 70vh;
+    background-attachment: fixed;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 100px;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+@keyframes entrada-hero {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.conteudo-causas {
+    max-width: 650px;
+    text-align: left;
+    animation: entrada-hero 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .conteudo-causas h1 {
-    margin-left: 120px;
-    margin-top: 0;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    line-height: 1.2;
-    color: white;
+    color: #ffffff;
+    font-family: "Merriweather", serif;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.4);
+    margin-top: 0; 
 }
 
 .conteudo-causas p {
+    color: #e9ecef;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
     position: relative;
-    margin-left: 100px;
-    max-width: none;
-    font-size: 1.25rem;
-    color: white;
+    padding-left: 20px;
 }
 
+.conteudo-causas p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 4px;
+    height: 90%;
+    background-color: var(--verde-claro);
+    border-radius: 2px;
+}
+
+.container-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 80px 20px;
+    background-color: var(--fundo-claro);
+}
+
+.info {
+    width: 260px;
+    text-align: center;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(1, 40, 31, 0.06); 
+    border: 1px solid rgba(1, 40, 31, 0.04);
+}
+
+
+.info .numero-destaque {
+    font-size: 2.8rem;
+    font-family: "Merriweather", serif;
+    color: var(--rosa-alerta);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    display: block;
+    line-height: 1.2;
+}
+
+.info p {
+    color: var(--verde-escuro);
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 500;
+}
 .causas {
     margin-top: 30px;
     display: flex;

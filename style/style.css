@@ -267,3 +267,36 @@ nav ul li a:hover::after {
     color: #64748b;
     margin: 0;
 }
+/*referencias*/
+.referencias {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 60px 40px;
+    background-color: var(--fundo-claro);
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.referencias h2 {
+    color: var(--verde-escuro);
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-family: "Merriweather", serif;
+    text-align: center;
+}
+
+.lista-referencias {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.lista-referencias li {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #2c3531;
+    line-height: 1.5;
+    text-align: left;
+}

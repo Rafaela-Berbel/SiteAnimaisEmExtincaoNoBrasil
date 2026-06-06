@@ -1,26 +1,73 @@
-/* PÁGINA: COMO AJUDAR */
-.inicio-ajudar {
-    padding-top: 180px;
-    padding-bottom: 30px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 30px;
-    align-items: flex-start;
-    font-family: "Merriweather", serif;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
-        url(../imagens/boto_agua_doce.png);
+.inicio-ajuda {
+    background-image: linear-gradient(rgba(1, 40, 31, 0.65), rgba(1, 40, 31, 0.85)), url(../imagens/boto_agua_doce.png);
     background-size: cover;
     background-position: center;
-    min-height: 70vh;
+    background-attachment: fixed;
+    height: 75vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 80px;
+    padding-left: 10%;
+    padding-right: 5%;
+    box-sizing: border-box;
 }
 
 .tudo-ajudar {
     padding-bottom: 0;
+    width: 100%;
 }
 
+@keyframes entrada-hero {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.conteudo-ajuda {
+    max-width: 650px;
+    text-align: left;
+    animation: entrada-hero 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.conteudo-ajuda h1 {
+    color: #ffffff;
+    font-family: "Merriweather", serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+    margin-top: 0; 
+}
+
+.conteudo-ajuda p {
+    color: #e9ecef;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.conteudo-ajuda p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 4px;
+    height: 90%;
+    background-color: var(--verde-claro, #2ec4b6);
+    border-radius: 2px;
+}
 .container-acoes {
     max-width: 1200px;
     margin: 60px auto;
