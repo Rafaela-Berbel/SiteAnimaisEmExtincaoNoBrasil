@@ -1,194 +1,292 @@
 .tudo-causas {
-    margin-bottom: 120px;
+  margin-bottom: 120px;
 }
 
 /* BANNER INICIAL - Padrão Editorial Identificado com Animais */
 .inicio-causas {
-    background-image: linear-gradient(rgba(1, 40, 31, 0.65), rgba(1, 40, 31, 0.85)), url(../imagens/veado-em-chamas.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 100px;
-    padding-left: 10%;
-    padding-right: 5%;
+  background-image:
+    linear-gradient(rgba(1, 40, 31, 0.65), rgba(1, 40, 31, 0.85)),
+    url(../imagens/veado-em-chamas.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 5%;
 }
 
 @keyframes entrada-hero {
-    from {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .conteudo-causas {
-    max-width: 650px;
-    text-align: left;
-    animation: entrada-hero 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  max-width: 650px;
+  text-align: left;
+  animation: entrada-hero 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .conteudo-causas h1 {
-    color: #ffffff;
-    font-family: "Merriweather", serif;
-    font-size: 3.75rem;
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 20px;
-    text-shadow: 2px 4px 15px rgba(0,0,0,0.4);
-    margin-top: 0; 
+  color: #ffffff;
+  font-family: "Merriweather", serif;
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 0;
 }
 
 .conteudo-causas p {
-    color: #e9ecef;
-    font-family: "Libre Baskerville", serif;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 35px;
-    position: relative;
-    padding-left: 20px;
+  color: #e9ecef;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  position: relative;
+  padding-left: 20px;
 }
 
 .conteudo-causas p::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 4px;
-    height: 90%;
-    background-color: var(--verde-claro);
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  height: 90%;
+  background-color: var(--verde-claro);
+  border-radius: 2px;
 }
 
 .container-info {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 80px 20px;
-    background-color: var(--fundo-claro);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 80px 20px;
+  background-color: var(--fundo-claro);
 }
 
 .info {
-    width: 260px;
-    text-align: center;
-    background: white;
-    padding: 35px 25px;
-    border-radius: 28px;
-    box-shadow: 0 10px 30px rgba(1, 40, 31, 0.06); 
-    border: 1px solid rgba(1, 40, 31, 0.04);
+  width: 260px;
+  text-align: center;
+  background: white;
+  padding: 35px 25px;
+  border-radius: 28px;
+  box-shadow: 0 10px 30px rgba(1, 40, 31, 0.06);
+  border: 1px solid rgba(1, 40, 31, 0.04);
 }
 
-
 .info .numero-destaque {
-    font-size: 2.8rem;
-    font-family: "Merriweather", serif;
-    color: var(--rosa-alerta);
-    margin: 0 0 10px 0;
-    font-weight: 700;
-    display: block;
-    line-height: 1.2;
+  font-size: 2.8rem;
+  font-family: "Merriweather", serif;
+  color: var(--rosa-alerta);
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
 }
 
 .info p {
-    color: var(--verde-escuro);
-    font-family: "Inter", sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 0;
-    font-weight: 500;
+  color: var(--verde-escuro);
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 500;
 }
 .causas {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-family: "Libre Baskerville", serif;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
 }
 
 .causas h2 {
-    margin-top: 4rem;
-    font-size: 1.25rem;
-    font-family: "Merriweather", serif;
+  margin-top: 4rem;
+  font-size: 1.25rem;
+  font-family: "Merriweather", serif;
 }
 
 .causas p {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
+}
+.causas-bioma {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.cabecalho-bioma {
+  width: 100%;
+  max-width: 1000px;
+  margin: 80px auto 40px auto;
+  text-align: left;
+  position: relative;
+}
+
+.cabecalho-bioma h2 {
+  font-size: 2.2rem;
+  color: var(--verde-escuro);
+  font-family: "Merriweather", serif;
+  margin: 0;
+  display: inline-block;
+  background-color: var(--fundo-claro);
+  padding-right: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.cabecalho-bioma hr {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(1, 40, 31, 0.1);
+  border: none;
+  z-index: 1;
+}
+
+.banner-bioma {
+  width: 100%;
+  height: 35vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0 60px 0;
+  position: relative;
+}
+
+.banner-bioma::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 40, 31, 0.7);
+}
+
+.banner-bioma h2 {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-family: "Merriweather", serif;
+  font-size: 3.5rem;
+  text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.bg-amazonia {
+  background-image: url("../imagens/bg-amazonia.jpg");
+}
+.bg-cerrado {
+  background-image: url("../imagens/bg-cerrado.jpg");
+}
+.bg-mata {
+  background-image: url("../imagens/bg-mata.jpg");
+}
+.bg-global {
+  background-image: url("../imagens/bg-global.jpg");
 }
 
 .pagina-causas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    margin: 30px auto;
-    max-width: 1000px;
-    font-family: "Merriweather", serif;
-    background-color: var(--caixa-destaque);
-    border-radius: 20px;
-    padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 30px auto;
+  max-width: 1000px;
+  font-family: "Merriweather", serif;
+  background-color: var(--caixa-destaque);
+  border-radius: 20px;
+  padding: 30px;
 }
 
 .pagina-causas p {
-    max-width: 500px;
-    color: var(--verde-escuro);
-    font-family: "Libre Baskerville", serif;
+  max-width: 500px;
+  color: var(--verde-escuro);
+  font-family: "Libre Baskerville", serif;
 }
 
 .conteudo-principais {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
 }
 
 .pagina-causas-img {
-    overflow: hidden;
-    height: 350px;
-    border-radius: 30px;
+  overflow: hidden;
+  height: 350px;
+  border-radius: 30px;
 }
 
 .pagina-causas-img img {
-    height: 350px;
-    border-radius: 30px;
-    transition: transform 0.5s ease;
-    display: block;
+  height: 350px;
+  border-radius: 30px;
+  transition: transform 0.5s ease;
+  display: block;
 }
 
 .pagina-causas-img img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .imagem-mini {
-    display: flex;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
 }
 
 .imagem-mini p {
-    font-family: "Libre Baskerville", serif;
-    font-size: 1.25rem;
-    color: rgb(255, 0, 102);
-    margin: 0;
-    background-color: rgba(255, 0, 102, 0.2);
-    border-radius: 10px;
-    padding: 10px;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.25rem;
+  color: rgb(255, 0, 102);
+  margin: 0;
+  background-color: rgba(255, 0, 102, 0.2);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .imagem-mini img {
-    height: 80px;
-    width: auto;
-    background-color: rgba(183, 228, 199, 0.4);
-    border-radius: 10px;
+  height: 80px;
+  width: auto;
+  background-color: rgba(183, 228, 199, 0.4);
+  border-radius: 10px;
+}
+
+.pagina-causas-img img {
+  filter: grayscale(100%);
+  transition:
+    filter 0.5s ease-in-out,
+    transform 0.5s ease;
+}
+
+.pagina-causas:hover .pagina-causas-img img {
+  filter: grayscale(0%);
+  transform: scale(1.02); /* Um leve zoom para dar mais imersão */
 }
