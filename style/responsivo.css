@@ -4,14 +4,37 @@
     }
 
     .sobre {
-        flex-direction: column;
-        padding: 40px;
-        gap: 40px;
+        padding: 60px 0;
     }
 
-    .texto-sobre,
-    .sobre-figura {
-        width: 100%;
+    .sobre-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .sobre-conteudo {
+        text-align: center;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .sobre-conteudo p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .btn-sobre {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+
+    .sobre-imagem {
+        height: 320px;
+        border-radius: 20px;
     }
 
     .informacoes {
@@ -35,6 +58,22 @@
         width: calc(50% - 25px);
         min-width: 300px;
     }
+
+    .cards-como-ajudar,
+    .ongs-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 40px;
+    }
+
+    .animal-principal {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .texto-animal ul {
+        text-align: left;
+    }
 }
 
 @media (max-width: 768px) {
@@ -47,6 +86,8 @@
 
     nav ul {
         gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     nav ul li a {
@@ -64,7 +105,12 @@
 
     .inicio-causas,
     .inicio-consequencia,
-    .inicio-ajudar {
+    .inicio-ajuda,
+    .inicio-animais,
+    .hero-animal,
+    .hero-terrestre,
+    .hero-aquatico,
+    .hero-aereo {
         padding: 140px 20px 40px 20px !important;
         align-items: center !important;
         justify-content: center !important;
@@ -74,29 +120,38 @@
     }
 
     .conteudo-causas,
-    .conteudo-consequencias {
+    .conteudo-consequencias,
+    .conteudo-ajuda,
+    .conteudo-animais {
         max-width: 100%;
         text-align: center !important;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 0;
+        padding: 0 20px;
     }
 
     .conteudo-causas h1,
-    .conteudo-consequencias h1 {
+    .conteudo-consequencias h1,
+    .conteudo-ajuda h1,
+    .conteudo-animais h1 {
         margin-left: 0;
         text-align: center !important;
         font-size: 2.25rem !important;
     }
 
     .conteudo-causas p,
-    .conteudo-consequencias p {
+    .conteudo-consequencias p,
+    .conteudo-ajuda p,
+    .conteudo-animais p {
         margin-left: 0;
         text-align: center !important;
         padding-left: 0 !important;
     }
 
-    .conteudo-consequencias p::before {
+    .conteudo-consequencias p::before,
+    .conteudo-animais p::before {
         display: none;
     }
 
@@ -128,6 +183,9 @@
     .container-consequencias {
         margin: 30px auto 60px auto;
         gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
     }
 
     .card-consequencias {
@@ -136,32 +194,55 @@
     }
 
     .pagina-causas {
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-        width: 90%;
+        flex-direction: column !important;
+        padding: 40px 20px !important;
+        gap: 30px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: none !important;
     }
 
     .invertida {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     .desloca-esquerda,
     .desloca-direita,
     .mini-esquerda,
-    .mini-direita {
-        transform: none;
+    .mini-direita,
+    .conteudo-principais,
+    .imagem-causas {
+        transform: none !important;
+        left: unset !important;
+        right: unset !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
-    .pagina-causas img {
-        height: auto;
-        width: 100%;
-        max-width: 100%;
+    .pagina-causas img,
+    .imagem-causas img {
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        object-fit: cover;
+        border-radius: 20px;
     }
 
     .conteudo-principais {
-        max-width: 100%;
-        text-align: center;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    .secao-organizacoes {
+        padding: 60px 20px;
+    }
+
+    .container-acoes,
+    .cards-como-ajudar,
+    .ongs-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
     }
 
     .rodape-container {
@@ -174,16 +255,96 @@
         width: 100%;
     }
 
-    .container-acoes,
-    .cards-como-ajudar,
-    .ongs-container {
-        grid-template-columns: 1fr;
+    .animal-principal img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+    }
+
+    .texto-animal h2 {
+        font-size: 2.5rem;
+    }
+
+    .estatisticas,
+    .tabela-animais {
+        padding: 40px 15px;
+    }
+
+    .estatisticas h2,
+    .tabela-animais h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .subtitulo-grafico {
+        margin-bottom: 40px;
+    }
+
+    .container-tabela {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 20px;
+        margin: 10px 0;
+    }
+
+    table {
+        width: 100%;
+        min-width: 580px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    td img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .botoes-navegacao {
+        flex-direction: column;
+        padding: 30px 20px;
+        width: 100%;
+    }
+
+    .btn-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .referencias {
+        width: 90%;
+        margin: 40px auto;
+        padding: 40px 20px;
+    }
+
+    .referencias h2 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+
+    .lista-referencias {
+        gap: 15px;
+    }
+
+    .lista-referencias li {
+        font-size: 0.9rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 }
 
 @media (max-width: 480px) {
     .inicio h1,
-    .conteudo-consequencias h1 {
+    .conteudo-consequencias h1,
+    .conteudo-causas h1,
+    .conteudo-ajuda h1,
+    .conteudo-animais h1 {
         font-size: 1.85rem !important;
     }
 
@@ -206,5 +367,17 @@
     .ajuda-card,
     .ong-card {
         padding: 24px 20px;
+    }
+
+    .texto-animal h2 {
+        font-size: 2rem;
+    }
+
+    .animal-principal {
+        padding: 40px 20px;
+    }
+
+    .referencias h2 {
+        font-size: 1.8rem;
     }
 }

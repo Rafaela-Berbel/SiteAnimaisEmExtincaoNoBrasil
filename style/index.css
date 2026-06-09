@@ -1,7 +1,3 @@
-/* =======================================================
-   PÁGINA: INÍCIO (index.html)
-   ======================================================= */
-
 .inicio {
     padding-top: 140px;
     padding-bottom: 60px;
@@ -36,13 +32,13 @@
     margin-bottom: 15px;
     line-height: 1.1;
     text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
-    color: white; /* Consolidado do .conteudo h1 */
+    color: white;
 }
 
 .inicio p {
     position: relative;
     font-family: "Libre Baskerville", serif;
-    font-size: 1.125rem; /* Consolidado (18px) */
+    font-size: 1.125rem;
     line-height: 1.7;
     color: white;
     max-width: 580px; 
@@ -61,7 +57,6 @@
     border-radius: 2px;
 }
 
-/* Animação para o botão  */
 @keyframes flutuar-botao {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(12px); }
@@ -89,13 +84,6 @@
     animation-play-state: paused;
 }
 
-/* =======================================================
-   SEÇÃO: INFORMAÇÕES E SOBRE
-   ======================================================= */
-/* =======================================================
-   SEÇÃO: INFORMAÇÕES E SOBRE (FOCO EM ANIMAÇÕES CSS)
-   ======================================================= */
-
 .informacoes {
     background-color: var(--fundo-claro);
     min-height: 100vh;
@@ -110,89 +98,97 @@
 }
 
 .sobre {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr; 
-    gap: 60px; 
-    align-items: center;
-    background: rgba(255, 255, 255, 0.45); 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 60px;
-    border-radius: 40px;
-    max-width: 1140px;
-    margin: 0 auto; 
-    box-shadow: 0 30px 60px rgba(1, 40, 31, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.sobre::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 15%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
-    transform: skewX(-25deg);
-    animation: brilho-vidro 6s infinite ease-in-out;
-}
-
-.sobre:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 40px 80px rgba(1, 40, 31, 0.12);
-}
-
-.texto-sobre {
-    position: relative;
     width: 100%;
+    padding: 100px 0;
+    background-color: var(--fundo-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes revelar-texto {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.sobre-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.texto-sobre h1 {
-    font-size: 3.5rem;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    color: var(--verde-escuro);
+.sobre-conteudo {
+    text-align: left;
+}
+
+.sobre-conteudo h2 {
     font-family: "Merriweather", serif;
+    color: var(--verde-escuro);
+    font-size: 2.8rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
-    animation: revelar-texto 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 1.2;
 }
 
-.texto-sobre p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-bottom: 24px;
-    font-family: "Libre Baskerville", serif;
-    color: #2c3531;
-    text-align: justify;
-    animation: revelar-texto 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
-    animation-delay: 0.2s;
+.sobre-conteudo p {
+    font-family: "Inter", sans-serif;
+    color: #4a5568;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.btn-sobre {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--verde-escuro);
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(1, 40, 31, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: flutuar-botao 2s infinite ease-in-out;
+}
+
+.btn-sobre:hover {
+    background-color: var(--verde-claro);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(1, 40, 31, 0.25);
+     animation-play-state: paused;
+}
+
+.sobre-imagem {
+    width: 100%;
+    height: 450px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(1, 40, 31, 0.08);
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 @keyframes desenhar-linha {
     0% { border-color: rgba(27, 67, 50, 0.1); transform: rotate(0deg); }
     50% { border-color: var(--verde-medio); }
     100% { border-color: rgba(27, 67, 50, 0.1); transform: rotate(360deg); }
 }
+
 .sobre-figura {
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
 }
+
 .sobre-figura::before {
     content: "";
     position: absolute;
@@ -207,6 +203,7 @@
     opacity: 0.5;
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.5s ease;
 }
+
 @keyframes flutuar-imagem {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -222,6 +219,7 @@
     transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     animation: flutuar-imagem 5s infinite ease-in-out;
 }
+
 .sobre:hover .sobre-figura img {
     transform: scale(1.04) translateY(-5px);
     box-shadow: 0 30px 60px rgba(1, 40, 31, 0.25);
@@ -264,6 +262,7 @@
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
     animation: pulsar-botao 2.5s infinite ease-in-out;
 }
+
 .texto-sobre .botao-causas::before {
     content: "";
     position: absolute;
@@ -288,6 +287,7 @@
     transform: scaleX(1);
     transform-origin: left;
 }
+
 .texto-sobre .botao-causas:active {
     transform: translateY(-1px) scale(0.98);
 }

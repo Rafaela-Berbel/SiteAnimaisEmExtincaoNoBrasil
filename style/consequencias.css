@@ -41,8 +41,8 @@
     font-weight: 700;
     line-height: 1.15;
     margin-bottom: 20px;
-    text-shadow: 2px 4px 15px rgba(0,0,0,0.4);
-    margin-top: 0; 
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+    margin-top: 0;
 }
 
 .conteudo-consequencias p {
@@ -75,14 +75,55 @@
     background-color: var(--fundo-claro);
 }
 
+@keyframes flutuar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .info {
     width: 260px;
     text-align: center;
     background: white;
     padding: 35px 25px;
     border-radius: 28px;
-    box-shadow: 0 10px 30px rgba(1, 40, 31, 0.06); 
+    box-shadow: 0 10px 30px rgba(1, 40, 31, 0.06);
     border: 1px solid rgba(1, 40, 31, 0.04);
+    text-decoration: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: flutuar 6s ease-in-out infinite;
+}
+
+.info:nth-child(even) {
+    animation-delay: 1.5s;
+}
+
+.info:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.info:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(1, 40, 31, 0.12);
+}
+
+@keyframes pulsarTexto {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .info .numero-destaque {
@@ -93,6 +134,7 @@
     font-weight: 700;
     display: block;
     line-height: 1.2;
+    animation: pulsarTexto 3s ease-in-out infinite;
 }
 
 .info p {
@@ -140,6 +182,17 @@
     background-color: var(--fundo-claro);
 }
 
+@keyframes revelarCard {
+    from {
+        opacity: 0;
+        transform: translateY(50px) cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .card-consequencias {
     width: 360px;
     background-color: #ffffff;
@@ -147,17 +200,48 @@
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(1, 40, 31, 0.05);
     border: 1px solid rgba(1, 40, 31, 0.03);
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+    animation: revelarCard 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.card-consequencias:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.card-consequencias:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card-consequencias:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.card-consequencias:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.card-consequencias:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.card-consequencias:nth-child(6) {
+    animation-delay: 0.6s;
 }
 
 .card-consequencias:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(1, 40, 31, 0.12);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(1, 40, 31, 0.15);
 }
 
 @keyframes aparecer {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 @supports (animation-timeline: view()) {
@@ -167,15 +251,15 @@
     }
 
     .card-consequencias:nth-child(3n + 1) {
-        animation-range: entry 0% cover 20%;
+        animation-range: entry 0% cover 25%;
     }
 
     .card-consequencias:nth-child(3n + 2) {
-        animation-range: entry 5% cover 25%;
+        animation-range: entry 5% cover 30%;
     }
 
     .card-consequencias:nth-child(3n + 3) {
-        animation-range: entry 10% cover 30%;
+        animation-range: entry 10% cover 35%;
     }
 }
 
@@ -189,6 +273,12 @@
     background-size: cover;
     background-position: center;
     color: white;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-consequencias:hover .card-header {
+    background-size: cover;
+    transform: scale(1.05);
 }
 
 .card-consequencias:nth-child(1) .card-header {
@@ -225,6 +315,12 @@
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card-consequencias:hover .icon-box {
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(10deg) scale(1.1);
 }
 
 .icon-box img {
