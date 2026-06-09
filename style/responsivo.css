@@ -65,8 +65,10 @@
         padding: 0 40px;
     }
 
+    /* FORÇANDO O FLEXBOX PARA O CARD DO ANIMAL PRINCIPAL */
     .animal-principal {
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
         text-align: center;
         gap: 40px;
     }
@@ -103,6 +105,7 @@
         max-width: 90%;
     }
 
+    /* GARANTINDO QUE OS HEROS SE COMPORTEM COMO FLEXBOX COLUNA NO MOBILE */
     .inicio-causas,
     .inicio-consequencia,
     .inicio-ajuda,
@@ -111,6 +114,8 @@
     .hero-terrestre,
     .hero-aquatico,
     .hero-aereo {
+        display: flex !important;
+        flex-direction: column !important;
         padding: 140px 20px 40px 20px !important;
         align-items: center !important;
         justify-content: center !important;
@@ -155,10 +160,12 @@
         display: none;
     }
 
+    /* AJUSTANDO OS QUADROS DE ESTIMATIVAS (35%, 21%...) */
     .container-info {
+        display: flex !important;
+        flex-direction: column !important;
         gap: 20px;
         padding: 40px 20px;
-        flex-direction: column;
         align-items: center;
     }
 
@@ -246,7 +253,8 @@
     }
 
     .rodape-container {
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 30px;
     }
 
@@ -259,25 +267,45 @@
         width: 100%;
         height: auto;
         max-width: 350px;
+        margin: 0 auto;
     }
 
     .texto-animal h2 {
         font-size: 2.5rem;
     }
 
-    .estatisticas,
-    .tabela-animais {
-        padding: 40px 15px;
+    /* AJUSTES DO GRÁFICO DE BARRAS */
+    .estatisticas {
+        padding: 40px 20px;
     }
 
-    .estatisticas h2,
-    .tabela-animais h2 {
+    .estatisticas h2 {
         font-size: 1.8rem;
         margin-bottom: 20px;
     }
 
     .subtitulo-grafico {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+    }
+
+    .grafico {
+        width: 100%;
+        padding: 0;
+    }
+
+    .barra-item span {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* TABELA RESPONSIVA */
+    .tabela-animais {
+        padding: 40px 15px;
+    }
+
+    .tabela-animais h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
     }
 
     .container-tabela {
@@ -306,14 +334,32 @@
         height: 55px;
     }
 
+    /* BOTÕES DE NAVEGAÇÃO SUPERIORES */
     .botoes-navegacao {
-        flex-direction: column;
-        padding: 30px 20px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px;
+        padding: 20px;
         width: 100%;
     }
 
     .btn-nav {
         width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* BOTÃO "VER MAIS ANIMAIS" CENTRADO */
+    .container-botao {
+        display: flex !important;
+        justify-content: center !important;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .btn-animais {
+        width: 100%;
+        max-width: 300px;
         text-align: center;
     }
 
